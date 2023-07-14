@@ -103,7 +103,7 @@ const[dream9, setdream9] = useState([])
   let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
 
 let dream = getObjectSpecific(newObj,id)
-console.log(dream)
+// console.log(dream)
   // console.log(getObjectKey(newObj,id))
   // getObjectKey(newObj,id)
 

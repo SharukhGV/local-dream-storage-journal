@@ -1,32 +1,39 @@
 // import { useState } from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// import { v4 as uuidv4 } from 'uuid';
+
 // import DreamDetails from "./DreamDetails";
 function Dream({ individualdreamID,individualdreams, id, isGoodQ, name, date, description, topic, night, index }) {
   // const { v4: uuidv4 } = require('uuid');
 //   const {id} = useParams();
-//   const [show, setShow] = useState(false);   @@@@@@@@@@@@@@@@@
+  const [name1, setname1] = useState([]);   
+  const [topic1, settopic1] = useState([]);   
+  const [identification, setidentification] = useState([]);   
 
 useEffect(()=>{
   // window.localStorage.setItem("dataJSON", JSON.stringify([]));
 
   window.localStorage.getItem("dataJSON");
-},[])
+  setname1(name)
+  settopic1(topic)
+  setidentification(id)
+},[id,name,topic])
 
 // //   const navigate = useNavigate();
 // const API = process.env.REACT_APP_API_URL;
-const [dreams7, setdreams7] = useState([]);
+// const [dreams7, setdreams7] = useState([]);
 
-useEffect(()=>{
+// useEffect(()=>{
 
     
-  // let newObj = window.localStorage.getItem("dataJSON")
-window.localStorage.setItem(`${individualdreams.id}`,JSON.stringify(individualdreams))
-  // setdreams7(JSON.parse(window.localStorage.getItem("dataJSON")))
-  setdreams7(JSON.parse(window.localStorage.getItem(`${individualdreams.id}`)))
+//   // let newObj = window.localStorage.getItem("dataJSON")
+// window.localStorage.setItem(`${individualdreams.id}`,JSON.stringify(individualdreams))
+//   // setdreams7(JSON.parse(window.localStorage.getItem("dataJSON")))
+//   setdreams7(JSON.parse(window.localStorage.getItem(`${individualdreams.id}`)))
     
 
-},[individualdreams])
+// },[individualdreams])
 //   useEffect(() => {
 //     axios
 //       .get(`${API}/dreams/${individualdreamID}`)
@@ -38,7 +45,7 @@ window.localStorage.setItem(`${individualdreams.id}`,JSON.stringify(individualdr
 //         console.log(err);
 //       });
 //   }, [API,individualdreamID]);
-console.log(dreams7)
+// console.log(dreams7)
 // console.log(id)
 // console.log(name)
 // console.log(index)
@@ -49,9 +56,9 @@ console.log(dreams7)
 <tbody>
     <tr>
         <td>{index+=1}</td>
-    <td><Link to={`/dreams/${dreams7.id}`}>{dreams7.name}</Link>
+    <td><Link to={`/dreams/${identification}`}>{name1}</Link>
 </td>
-    <td>{dreams7.topic}</td>
+    <td>{topic1}</td>
     </tr>
     </tbody>
 

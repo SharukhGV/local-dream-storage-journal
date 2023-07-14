@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";//
 import { useState,useEffect } from "react";
 // import axios from "axios";
 import moment from "moment";
-import { useId } from "react-id-generator";
+import { v4 as uuidv4 } from 'uuid';
 // var dataJSON =  require("./data.json")
 // import data from "./localJson"
 
@@ -11,9 +11,9 @@ import { useId } from "react-id-generator";
 function DreamNewForm() {
   // const [arrayObjectDATA, setarrayObjectDATA] = useState([])
 
-  const [htmlId] = useId();
+  // const [htmlId] = useId();
   const [dream, setdream] = useState({
-    id: htmlId,
+    id: uuidv4(),
     name: "",
     good_dream: "",
     dream_description: "",
@@ -120,7 +120,7 @@ navigate("/dreams")
       <form onSubmit={handleSubmit}>
         {/* <form> */}
 
-        <input type="hidden" id="id" name="id" value={htmlId}></input>
+        <input type="hidden" id="id" name="id" value={dream.id}></input>
 
         <label htmlFor="name">Name:</label>
         <input
