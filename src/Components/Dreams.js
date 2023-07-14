@@ -1,27 +1,24 @@
 // import axios from "axios";
-import { useState, useEffect } from "react";
+import { useEffect,useState } from "react";
 import Dream from "./Dream";
 // var dataJSON =  require("./data.json")
-
+// import { useNavigate } from "react-router-dom";
 function Dreams(){
          const [dreams7, setdreams7] = useState([]);
 
-         useEffect(()=>{
-          // window.localStorage.setItem("dataJSON", JSON.stringify([]));
-        
-          window.localStorage.getItem("dataJSON");
-        },[])
-
+        // const navigate = useNavigate();
 
 
   useEffect(()=>{
-    
-    let newObj = window.localStorage.getItem("dataJSON")
-
-    setdreams7(JSON.parse(newObj))
-    
+//  window.localStorage.getItem('dataJSON')
+  const newObj =  JSON.parse(window.localStorage.getItem('dataJSON'))    
+// window.localStorage.getItem('dataJSON')
+    setdreams7(newObj)
 
   },[])
+
+
+
       // const API = process.env.REACT_APP_API_URL;
       // useEffect(()=>{
       //         let newObj = JSON.parse(localStorage.getItem("dataJSON"))
@@ -52,7 +49,7 @@ function Dreams(){
     <th>Dream Name</th>
     <th>Topic</th>
   </tr></thead>
-              {!!dreams7 ? dreams7.map((individualdreams, index) => {
+              { dreams7.map((individualdreams, index) => {
 
                 return (
                   
@@ -60,7 +57,7 @@ function Dreams(){
                     key={individualdreams.id} individualdreams={individualdreams} id={individualdreams.id}  name={individualdreams.name}  topic={individualdreams.topic} night={individualdreams.night} index={index}
                   />
                 );
-              }):<div></div>}
+              })}
          
         </table>
       );
