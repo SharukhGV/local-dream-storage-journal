@@ -19,7 +19,7 @@ function DreamNewForm() {
     dream_description: "",
     topic: "",
     date: "2000-01-01",
-    night: true,
+    night: "true",
   });
 
   useEffect(()=>{
@@ -95,6 +95,14 @@ navigate("/dreams")
   }
 
   const handleTextChange = (event) => {
+    // setdream({ ...dream, [event.target.id]: event.target.value });
+
+
+    if (event.target.id === "night") {
+      setdream({ ...dream, [event.target.id]: event.target.value === "true" });
+    } else {
+      setdream({ ...dream, [event.target.id]: event.target.value === "false" });
+    }
     setdream({ ...dream, [event.target.id]: event.target.value });
   };
 

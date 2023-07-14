@@ -65,11 +65,11 @@ function DreamEditForm() {
   // }, [id]);
 
   const handleTextChange = (event) => {
-    if (event.target.id === "night") {
-      setdream({ ...dream, [event.target.id]: event.target.value === "true" });
-    } else {
-      setdream({ ...dream, [event.target.id]: event.target.value });
-    }
+    // if (event.target.id === "night") {
+    //   setdream({ ...dream, [event.target.id]: event.target.value === true });
+    // } else {
+    //   setdream({ ...dream, [event.target.id]: event.target.value });
+    // }
     setdream({ ...dream, [event.target.id]: event.target.value });
   };
 

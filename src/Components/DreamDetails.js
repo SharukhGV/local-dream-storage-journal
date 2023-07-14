@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 // import axios from "axios";
 import moment from "moment";
-
 function DreamDetails({ individualdreams, index }) {
   const { id } = useParams();
 
@@ -11,6 +10,25 @@ function DreamDetails({ individualdreams, index }) {
   
     window.localStorage.getItem("dataJSON");
   },[])
+
+// const [night9,setNight9]=useState([])
+
+//   useEffect(()=>{
+//     // window.localStorage.setItem("dataJSON", JSON.stringify([]));
+    
+    
+//     if(dream.night===true) {setNight9(true)}
+//     else{setNight9(false)}
+
+//     // window.localStorage.getItem("dataJSON");
+//   },[dream.night])
+
+
+
+
+
+
+
 
 
 //  {/* <p>THE THREE TYPES OF ISLAMIC DREAMS
@@ -156,6 +174,25 @@ window.localStorage.setItem('dataJSON', updatedArray);
     }
   }, [dream.good_dream]);
 
+
+
+
+  const [night9,setNight9]=useState([])
+
+  useEffect(()=>{
+    // window.localStorage.setItem("dataJSON", JSON.stringify([]));
+    
+        // window.localStorage.getItem("dataJSON");
+
+    if(dream.night==="true") {setNight9(true)}
+    else{setNight9(false)}
+
+  },[dream.night])
+
+
+
+
+
   return (
     <article className="cardContact" key={dream.id}>
       <fieldset style={textcoloring}>
@@ -191,7 +228,7 @@ window.localStorage.setItem('dataJSON', updatedArray);
           <tr>
             <td>Night-Time Dream: </td>
             <td>
-              {dream.night ? (
+              {night9 ? (
                 <div>🌙 Yes, Night Time</div>
               ) : (
                 <div>No, Day Time ☀️</div>
