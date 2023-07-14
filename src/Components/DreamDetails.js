@@ -5,11 +5,31 @@ import moment from "moment";
 function DreamDetails({ individualdreams, index }) {
   const { id } = useParams();
 
-  useEffect(()=>{
-    // window.localStorage.setItem("dataJSON", JSON.stringify([]));
-  
-    window.localStorage.getItem("dataJSON");
-  },[])
+const[dream9, setdream9] = useState([])
+
+  function getObjectSpecific(objects, id) {
+    // return Object.keys(obj).find(key => obj[key] === value);
+    let targetObject = null;
+
+    // Iterate through the array of objects
+    for (let i = 0; i < objects.length; i++) {
+      if (objects[i].id === id) {
+        targetObject = objects[i];
+        break;
+      }
+    }
+
+    // Check if the object with the given ID was found
+    if (targetObject !== null) {
+      // Retrieve the object
+      return targetObject;
+    } else {
+      // Object with the given ID not found
+      return null;
+    }
+  }
+
+
 
 // const [night9,setNight9]=useState([])
 
@@ -58,27 +78,27 @@ function DreamDetails({ individualdreams, index }) {
 
   // let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
 
-  function getObjectSpecific(objects, id) {
-    // return Object.keys(obj).find(key => obj[key] === value);
-    let targetObject = null;
+  // function getObjectSpecific(objects, id) {
+  //   // return Object.keys(obj).find(key => obj[key] === value);
+  //   let targetObject = null;
 
-    // Iterate through the array of objects
-    for (let i = 0; i < objects.length; i++) {
-      if (objects[i].id === id) {
-        targetObject = objects[i];
-        break;
-      }
-    }
+  //   // Iterate through the array of objects
+  //   for (let i = 0; i < objects.length; i++) {
+  //     if (objects[i].id === id) {
+  //       targetObject = objects[i];
+  //       break;
+  //     }
+  //   }
 
-    // Check if the object with the given ID was found
-    if (targetObject !== null) {
-      // Retrieve the object
-      return targetObject;
-    } else {
-      // Object with the given ID not found
-      return null;
-    }
-  }
+  //   // Check if the object with the given ID was found
+  //   if (targetObject !== null) {
+  //     // Retrieve the object
+  //     return targetObject;
+  //   } else {
+  //     // Object with the given ID not found
+  //     return null;
+  //   }
+  // }
 
   let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
 
@@ -91,6 +111,16 @@ console.log(dream)
 
 
 
+  useEffect(()=>{
+    // window.localStorage.setItem("dataJSON", JSON.stringify([]));
+  
+    window.localStorage.getItem("dataJSON");
+
+    let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
+    let dream = getObjectSpecific(newObj,id)
+    setdream9(dream)
+
+  },[])
 
   // const dream = getObjectKey(newObj, id);
 
@@ -194,7 +224,7 @@ window.localStorage.setItem('dataJSON', updatedArray);
 
 
   return (
-    <article className="cardContact" key={dream.id}>
+    <article className="cardContact" key={dream9.id}>
       <fieldset style={textcoloring}>
         <legend>
           <strong>Everyone has Dreams...</strong>
@@ -207,23 +237,23 @@ window.localStorage.setItem('dataJSON', updatedArray);
           </tr>
           <tr>
             <td>Name: </td>
-            <td>{dream.name}</td>
+            <td>{dream9.name}</td>
           </tr>
           <tr>
             <td>Date: </td>
-            <td>{moment(dream.date).format("YYYY-MM-DD")}</td>
+            <td>{moment(dream9.date).format("YYYY-MM-DD")}</td>
           </tr>
           <tr>
             <td>Emotions after Waking up:</td>
-            <td>{dream.good_dream}</td>
+            <td>{dream9.good_dream}</td>
           </tr>
           <tr>
             <td>Description of Dream</td>
-            <td>{dream.dream_description}</td>
+            <td>{dream9.dream_description}</td>
           </tr>
           <tr>
             <td>General Topic</td>
-            <td>{dream.topic}</td>
+            <td>{dream9.topic}</td>
           </tr>
           <tr>
             <td>Night-Time Dream: </td>
@@ -245,7 +275,7 @@ window.localStorage.setItem('dataJSON', updatedArray);
           </Link>
         </span>
         <span>
-          <Link to={`/dreams/${dream.id}/edit`}>
+          <Link to={`/dreams/${dream9.id}/edit`}>
             <button className="editbutton">Edit</button>
           </Link>
         </span>
