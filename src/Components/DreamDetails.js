@@ -120,7 +120,7 @@ console.log(dream)
     let dream = getObjectSpecific(newObj,id)
     setdream9(dream)
 
-  },[])
+  },[id])
 
   // const dream = getObjectKey(newObj, id);
 
