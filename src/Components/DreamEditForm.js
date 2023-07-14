@@ -33,7 +33,7 @@ function DreamEditForm() {
   }
   // console.log(dream)
   //dreams is the previous data populated into the form
-  let newObj = JSON.parse(localStorage.getItem("dataJSON"));
+  let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
   let dreams = getObjectSpecific(newObj, id);
   const [dream, setdream] = useState({
     id: dreams.id,
@@ -49,7 +49,7 @@ function DreamEditForm() {
 
   const navigate = useNavigate();
 
-  //   let dreamCLOUD7 = localStorage.getItem("dreamCLOUD")
+  //   let dreamCLOUD7 = window.localStorage.getItem("dreamCLOUD")
   // let dreamDATAarray = JSON.parse(dreamCLOUD7)
   // dreamDATAarray
   // console.log(dreamCLOUD9)
@@ -86,7 +86,7 @@ function DreamEditForm() {
   // // };
 function editObjectDream(){
 
-  const existingArray = JSON.parse(localStorage.getItem('dataJSON')) || [];
+  const existingArray = JSON.parse(window.localStorage.getItem('dataJSON')) || [];
 
   // Find the index of the object to remove
   const indexToRemove = existingArray.findIndex(obj => obj.id === id);
@@ -96,14 +96,14 @@ function editObjectDream(){
     existingArray.splice(indexToRemove, 1);
     existingArray.push(dream);
     const updatedArray = JSON.stringify(existingArray);
-    localStorage.setItem("dataJSON", updatedArray);
+    window.localStorage.setItem("dataJSON", updatedArray);
   }
   
   // Stringify the updated array
   const updatedArray = JSON.stringify(existingArray);
   
   // Store the updated array back into localStorage
-  localStorage.setItem('dataJSON', updatedArray);
+  window.localStorage.setItem('dataJSON', updatedArray);
 
 }
 
@@ -119,12 +119,12 @@ navigate(`/dreams/${id}`)
     
     // updatedream(id, dream);
     // console.log(dream)
-    // localStorage.removeItem(specificDREAM())
+    // window.localStorage.removeItem(specificDREAM())
 
     // dreamCLOUD9.push(dream)
     // removeItem(specificDREAM)
 
-    // localStorage.setItem(dream.id)
+    // window.localStorage.setItem(dream.id)
   };
 
   return (

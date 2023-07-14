@@ -1,11 +1,27 @@
 // import axios from "axios";
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Dream from "./Dream";
 // var dataJSON =  require("./data.json")
 
 function Dreams(){
-   
-      // const [dreams, setdreams] = useState([]);
+         const [dreams7, setdreams7] = useState([]);
+
+         useEffect(()=>{
+          // window.localStorage.setItem("dataJSON", JSON.stringify([]));
+        
+          window.localStorage.getItem("dataJSON");
+        },[])
+
+
+
+  useEffect(()=>{
+    
+    let newObj = window.localStorage.getItem("dataJSON")
+
+    setdreams7(JSON.parse(newObj))
+    
+
+  },[])
       // const API = process.env.REACT_APP_API_URL;
       // useEffect(()=>{
       //         let newObj = JSON.parse(localStorage.getItem("dataJSON"))
@@ -26,8 +42,7 @@ function Dreams(){
       // let dreamCLOUD9 = JSON.parse(dreamCLOUD7)
 // console.log(dreamCLOUD9)
 
-let newObj = localStorage.getItem("dataJSON")
-const dreams = JSON.parse(newObj)
+
 
       return (
         <table className="thedreamtable">
@@ -37,15 +52,15 @@ const dreams = JSON.parse(newObj)
     <th>Dream Name</th>
     <th>Topic</th>
   </tr></thead>
-              {dreams.map((individualdreams, index) => {
+              {!!dreams7 ? dreams7.map((individualdreams, index) => {
 
                 return (
                   
                   <Dream
-                    key={individualdreams.id} id={individualdreams.id} date={individualdreams.date} name={individualdreams.name} isGoodQ={individualdreams.good_dream} description={individualdreams.dream_description} topic={individualdreams.topic} night={individualdreams.night} index={index}
+                    key={individualdreams.id} individualdreams={individualdreams} id={individualdreams.id}  name={individualdreams.name}  topic={individualdreams.topic} night={individualdreams.night} index={index}
                   />
                 );
-              })}
+              }):<div></div>}
          
         </table>
       );

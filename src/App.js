@@ -9,15 +9,30 @@ import Index from "./Pages/Index";
 import NewForm from "./Pages/NewForm";
 import Show from "./Pages/Show";
 import "./App.css";
-var dataJSON =  require("./Components/data.json")
+import { useEffect } from "react";
+// var dataJSON =  require("./Components/data.json")
+
 
 // import SignIn from "./Components/auth/SignIn";
 // import SignUP from "./Components/auth/SignUp";
 // import PrivateRoute from "./Components/auth/PrivateRoute";
 // import { AuthContextProvider } from "./Components/auth/AuthContext";
-localStorage.setItem("dataJSON",JSON.stringify(dataJSON))
+// window.localStorage.setItem("dataJSON",JSON.stringify(dataJSON))
 
 function App() {
+  
+
+useEffect(()=>{
+
+  if(window.localStorage.getItem("dataJSON")){
+
+      window.localStorage.getItem("dataJSON");
+
+  }else{
+  window.localStorage.setItem("dataJSON", JSON.stringify([]));
+  }
+},[])
+
   return (
     <Router>
       <Nav />

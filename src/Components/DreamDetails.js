@@ -5,6 +5,14 @@ import moment from "moment";
 
 function DreamDetails({ individualdreams, index }) {
   const { id } = useParams();
+
+  useEffect(()=>{
+    // window.localStorage.setItem("dataJSON", JSON.stringify([]));
+  
+    window.localStorage.getItem("dataJSON");
+  },[])
+
+
 //  {/* <p>THE THREE TYPES OF ISLAMIC DREAMS
 // Dreams are broken into three parts according to the Sunnah:
 // Ru'yaa - good visions (dreams)
@@ -13,7 +21,7 @@ function DreamDetails({ individualdreams, index }) {
   // const [dream, setdreams] = useState([]);
   // const API = process.env.REACT_APP_API_URL;
   // useEffect(()=>{
-  //         let newObj = JSON.parse(localStorage.getItem("dataJSON"))
+  //         let newObj = JSON.parse(window.localStorage.getItem("dataJSON"))
   //     let newObjsingle = getObjectKey(newObj, id)
   //   setdreams(newObjsingle)
   // },[id])
@@ -30,7 +38,7 @@ function DreamDetails({ individualdreams, index }) {
   const navigate = useNavigate();
   const [thecolor, setthecolor] = useState("black");
 
-  // let newObj = JSON.parse(localStorage.getItem("dataJSON"));
+  // let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
 
   function getObjectSpecific(objects, id) {
     // return Object.keys(obj).find(key => obj[key] === value);
@@ -54,7 +62,7 @@ function DreamDetails({ individualdreams, index }) {
     }
   }
 
-  let newObj = JSON.parse(localStorage.getItem("dataJSON"));
+  let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
 
 let dream = getObjectSpecific(newObj,id)
 console.log(dream)
@@ -69,13 +77,13 @@ console.log(dream)
   // const dream = getObjectKey(newObj, id);
 
   // {
-  //   // id: `${JSON.parse(localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,id)}`,
-  //   // name: `${JSON.parse(localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"name")}`,
-  //   // good_dream: `${JSON.parse(localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"good_dream")}`,
-  //   // dream_description: `${JSON.parse(localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"dream_description")}`,
-  //   // topic:`${JSON.parse(localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"topic")}`,
-  //   // date: `${JSON.parse(localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"date")}}`,
-  //   // night: `${JSON.parse(localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"night")}}`
+  //   // id: `${JSON.parse(window.localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,id)}`,
+  //   // name: `${JSON.parse(window.localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"name")}`,
+  //   // good_dream: `${JSON.parse(window.localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"good_dream")}`,
+  //   // dream_description: `${JSON.parse(window.localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"dream_description")}`,
+  //   // topic:`${JSON.parse(window.localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"topic")}`,
+  //   // date: `${JSON.parse(window.localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"date")}}`,
+  //   // night: `${JSON.parse(window.localStorage.getItem("dataJSON"))}.${getObjectKey(newObj,"night")}}`
   // }
 
   // console.log(getObjectKey(newObj,id))
@@ -102,7 +110,7 @@ console.log(dream)
   const deleteDream = () => {
     // axios
     // Retrieve the existing array from localStorage
-const existingArray = JSON.parse(localStorage.getItem('dataJSON')) || [];
+const existingArray = JSON.parse(window.localStorage.getItem('dataJSON')) || [];
 
 // Find the index of the object to remove
 const indexToRemove = existingArray.findIndex(obj => obj.id === id);
@@ -116,8 +124,8 @@ if (indexToRemove !== -1) {
 const updatedArray = JSON.stringify(existingArray);
 
 // Store the updated array back into localStorage
-localStorage.setItem('dataJSON', updatedArray);
-// localStorage.removeItem(getObjectKey(dream, id))
+window.localStorage.setItem('dataJSON', updatedArray);
+// window.localStorage.removeItem(getObjectKey(dream, id))
     //   .delete(`${API}/dreams/${dream.id}`)
     //   .then(() => {
     navigate(`/dreams`);

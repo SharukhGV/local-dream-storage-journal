@@ -1,5 +1,5 @@
 import { useNavigate, Link } from "react-router-dom";//
-import { useState } from "react";
+import { useState,useEffect } from "react";
 // import axios from "axios";
 import moment from "moment";
 import { useId } from "react-id-generator";
@@ -9,7 +9,8 @@ import { useId } from "react-id-generator";
 // const API = process.env.REACT_APP_API_URL;
 
 function DreamNewForm() {
-  // const [togglebutton, setToggleButton] = useState(false)
+  // const [arrayObjectDATA, setarrayObjectDATA] = useState([])
+
   const [htmlId] = useId();
   const [dream, setdream] = useState({
     id: htmlId,
@@ -20,15 +21,27 @@ function DreamNewForm() {
     date: "2000-01-01",
     night: true,
   });
+
+  useEffect(()=>{
+    // window.localStorage.setItem("dataJSON", JSON.stringify([]));
+  
+    window.localStorage.getItem("dataJSON");
+  },[])
+
+// useEffect(()=>{
+//   setarrayObjectDATA(dream)
+
+// },[dream])
+
   // const [dreams, setdreams] = useState([]);
   // const API = process.env.REACT_APP_API_URL;
 
   // useEffect(() => {
-  //   let newObj = JSON.parse(localStorage.getItem("dataJSON"));
+  //   let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
   //   newObj.push(dream);
   //   const updatedArray = JSON.stringify(newObj);
-  //   localStorage.clear();
-  //   localStorage.setItem("dataJSON", updatedArray);
+  //   window.localStorage.clear();
+  //   window.localStorage.setItem("dataJSON", updatedArray);
   // }, [dream]);
 
   // const [userDataDREAM, setuserDataDREAM] = useState()
@@ -36,10 +49,10 @@ function DreamNewForm() {
   // const [dreamArray, setDreamArray] = useState([...dream])
 
   // useEffect (()=>{
-  //    localStorage.setItem("dream", JSON.stringify(dream));
+  //    window.localStorage.setItem("dream", JSON.stringify(dream));
   // // setuserDataDREAM(userData)
   // },[])
-  // const data = localStorage.setItem("dream", JSON.stringify(dream));
+  // const data = window.localStorage.setItem("dream", JSON.stringify(dream));
 
   // console.log("dream: ", JSON.parse(dream));
 
@@ -47,8 +60,8 @@ function DreamNewForm() {
   // https://www.npmjs.com/package/react-id-generator
 
   const navigate = useNavigate();
-  // const dreamCLOUD9 = localStorage.getItem(JSON.parse("dataJSON"))
-  // JSON.parse(localStoragelocalStorage.getItem("dataJSON")).push(dream)
+  // const dreamCLOUD9 = window.localStorage.getItem(JSON.parse("dataJSON"))
+  // JSON.parse(localStoragewindow.localStorage.getItem("dataJSON")).push(dream)
   // const [arrayValues,setArrayValues] = useState(...JSON.parse(dreamCLOUD9),dream)
 
   // useEffect(()=>{
@@ -61,47 +74,25 @@ function DreamNewForm() {
   // const arrayValues = [...dreamCLOUD9,dream]
 
   // useEffect(()=>{
+
+
+
+  // JSON.stringify(window.localStorage.getItem("dataJSON"))
+
+  
   function handleSubmit(event) {
     event.preventDefault();
-    // !togglebutton
-    // if(togglebutton){
-    // setArrayValues(...arrayValues, dream )
-    // let newObject = JSON.parse(localStorage.getItem("dataJSON")).push(dream)
-    // dreams.push(dream)
-    // localStorage.clear()
-    // localStorage.setItem("dataJSON", dreams)
-    // setToggleButton(false)
-
-    let newObj = JSON.parse(localStorage.getItem("dataJSON"));
+    
+    // window.localStorage.setItem("dataJSON", JSON.stringify(arrayObjectDATA));
+    
+    let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
     newObj.push(dream);
     const updatedArray = JSON.stringify(newObj);
-    localStorage.setItem("dataJSON", updatedArray);
-
-    // setdream({
-    //   id: htmlId,
-    //   name: "",
-    //   good_dream: "",
-    //   dream_description: "",
-    //   topic: "",
-    //   date: "2000-01-01",
-    //   night: true,
-    // });
+    window.localStorage.setItem("dataJSON", updatedArray);
 
 navigate("/dreams")
-    // }
-    // else console.log(arrayValues)
+   
   }
-  // },[togglebutton,arrayValues,dream,navigate])
-  // };
-
-  // console.log(dream)
-
-  // useEffect(()=>{
-  // const dreamCLOUD9 = localStorage.getItem(JSON.parse("dataJSON"))
-  //     localStorage.clear()
-  //     localStorage.setItem("dataJSON", JSON.stringify(...dreamCLOUD9,dream))
-
-  // },[])
 
   const handleTextChange = (event) => {
     setdream({ ...dream, [event.target.id]: event.target.value });
