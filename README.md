@@ -2,156 +2,58 @@
 
 ## INTRODUCTION ##
 
-August Kekulé figured out the chemical configuration structure of Benzene. He notably says that he came about this discovery through a dream he had of a snake biting its own tail. August Kekulé, the scientist responsible for this contribution to field of organic chemistry has been proven to be correct today through various spectroscopic techniques.
-Everyone has dreams! This application is a digital journal built to keep track of the dreams that you had while sleeping! In the section about Good dreams, bad dreams, or neutral dreams, it is totally up to User discretion to determine whether their dream was good or bad or neutral. An example of a good dream could be you wake up feeling happy and hopeful. An example of a bad dream could be waking up in a state of terror. A neutral dream could be something you dreamed about that happened in the previous day.
+August Kekulé figured out the chemical configuration structure of Benzene. He notably says that he came about this discovery through a dream he had of a snake biting its own tail. August Kekulé, the scientist responsible for this contribution to field of organic chemistry has been proven to be correct today through various spectroscopic techniques. Other notable people who have had contributed to the modern world through inspiration from their dreams include Alfred Russel Wallace and Elias Howe who contributed to the field of Biological Populations and the invention of the sewing machine (respectively).
 
-# Installation Instructions #
+<!-- Thank you James Lee for informing the developer about the invention of the sewing machine through a dream -->
 
-NOTE #1: You must have a GitHub account to clone and install this repository locally. If do not, you can view the project at the following link: [Dream Log App](https://chic-kitsune-7beb31.netlify.app/)
+Everyone has dreams! This application is a digital journal built to keep track of the dreams that you had while sleeping! In the section about good dreams, bad dreams, or neutral dreams, it is totally up to User discretion to determine whether their dream was good or bad or neutral. An example of a good dream could be you wake up feeling happy and hopeful. An example of a bad dream could be waking up in a state of terror. A neutral dream could be something you dreamed about that happened in the previous day.
 
-NOTES: name-of-folder is the name that you will be using for the created root directory of the project, where both the backend code and the frontend will be located inside. For example, if you use the name sharukhgv-dream-project-root-folder, then you have to consistantly use that every time instead of name-of-folder.
+## SIMPLICITY & PRIVACY ##
 
+This app was built focusing on user friendliness, simplicity, and privacy in mind. Since there is no database and everything is stored on the user's device locally, the user will not have to worry about their data being on someone else's computer. A future goals with this local app is to research forms of encryption and implement one of them. One node package that might do this is "react-secure-storage" from the site https://www.npmjs.com/package/react-secure-storage. Another goal is to allow users to download their information in the event they are upgrading their device and would need to bring their data over to their new device.
 
-1. Go to Terminal, and create a new Folder that you want to install the backend and frontend of the application...
+## USER STORY ##
 
-2. Change your directroy to this folder, that you have just created. You can do it with the following command (you may press tab for auto-complete after typing in a few of the first letters the folder's name):
 
-```
-cd name-of-folder
-//name-of-folder is the name of your folder
+*Here I will talk about how users can use the application.*
 
-```
+As a User, when I open the application, I see a home page with related information on the application's purpose. 
 
-3. in that folder (ie. name-of-folder), paste the following command: 
+As a User, I can also see and hear a neat little sound bit created by the developer thought to remind the user of the categorizing of dreams in this application. The main three tones of the music is low, medium, then high, thus trying to resemble the categorization of a bad dream, a neutral dream, and a good dream. These three categorizations of dreams in this application has been inspired by the developer's cultural background.
 
-```
-git clone https://github.com/SharukhGV/Dream-Log-App-frontend.git
-//this will install all the files necessary for the frontend part of the application, except for the .env file, which instructions will be explained later on.
+As a User, I see different navigation links at the top of the page. Upon clicking "All Dreams", I am taken to all the dreams logged, which appears blanks before any input of dreams from the "New Form" page, found by clicking the "New Form" link at the top of the page.
 
-```
+<!-- ## MODERN DAY IMPLICATIONS ## -->
 
-4.  in that same folder (ie. name-of-folder), paste the following command: 
 
-```
-git clone https://github.com/SharukhGV/Dream-Log-App-backend.git
-//this will install all the files necessary for the backend part of the application, except for the .env file, which instructions will be explained later on.
+<!-- 
+## MODERN DAY Medical/Secular USE ##
 
-```
+*PSYCHIATRY - SIGMUND F. (Patient Psycho-Analysis through their Dreams)*
 
-5. Open two separate terminals. If you are using VS Code and you are curently in the root (top-level) folder of the project (ie. name-of-folder), you will be in the root directory of the project (ie. name-of-folder).
+“But dreams can be used, he contends, to help a patient understand that the conflicting emotions he is currently experiencing are complicated by older, unrecognized emotions that are still meaningful, but just beyond his conscious grasp, a bit like a word at the tip of the tongue that just won't come to mind.”
 
-6. In one of the terminals, run the following command:
 
-```
-cd frontend
-// this will change the current directory to the frontend project code that was installed/cloned from the following link: https://github.com/SharukhGV/Dream-Log-App-frontend.git
+[Sigmund Freud statement from WEB-MD](https://www.webmd.com/mental-health/news/20010312/freudian-slip-do-dreams-still-have-role-in-psychiatry)
 
-```
 
-...and in the other terminal, run the following command:
 
-```
-cd backend
-// this will change the current directory to the backend project code that was installed/cloned from the following link: https://github.com/SharukhGV/Dream-Log-App-backend.git
+## MODERN DAY Religious/Cultural USE ##
 
-```
 
-7. In each terminal (both the frontend and the backend directories/folders that you just opened), run the following command:
+*In various religious texts, dreams are used as a guidance through life if interpreted correctly.*
 
-```
-npm install
-// this will install all the Node package dependencies for your project.
 
-```
+Here is an excerpt from the New International Version translation of the Bible:
 
-8. Create an .env file for your project by running the following command in each of the terminals (both the frontend and the backend):
+[Joseph's Dream - https://www.biblegateway.com/](https://www.biblegateway.com/passage/?search=Genesis%2037%3A1-44%3A9&version=NIV)
 
-```
-touch .env
+![Joseph's Dream in Genesis 37](dreamBible.png "Joseph's Dream in Bible")
 
-//this is the file that is usually necessary if you are going to push up your code to a remote public repository, so that your important sensitive information such as API keys will not be used in a way that you did not permit. Also, this file is necessary for connecting the frontend and the backend locally.
 
-```
+Here is an excerpt from a translation from the Quran:
 
-9. In a new terminal (like in step 5.), run the command to get back to the root folder of your project:
 
-```
+[Joseph's Dream - https://quran.com/](https://quran.com/12?startingVerse=101)
 
-cd ..
-
-//this command will move you into the previous directory (ie. name-of-folder)... ie. the directory that the current directory is located in (ie. name-of-folder).
-
-```
-
-10. In that same root folder (ie. name-of-folder), run the code:
-
-```
-
-code .
-
-//this will open all your code that you just installed in Microsoft's VS Code programming software. If you haven't installed it yet, go ahead and do it. You may need to also 
-
-```
-
-11. Click on the .env file from the frontend, and paste the following code:
-
-```
-REACT_APP_API_URL=http://localhost:7777
-```
-
-12. Click on the .env file from the backend on the left "Explorer" panel of VS code, and paste the following code into the .env file:
-
-```
-PORT=7777
-PG_HOST=localhost
-PG_PORT=5432
-PG_DATABASE=dream_log_database
-```
-
-13. Find the two terminals you had previously opened. In the backend terminal, run the following commands:
-
-```
-cd backend
-
-```
-
-
-```
-npm run db:init
-
-//this will initialize the schema file, which basically created the database called "dream_log_database" and the resource table called "dreams"
-
-```
-
-
-```
-npm run db:seed
-
-//this will run the seed file, which will populate the table with default values, which you can change later on if you please to do so.
-
-```
-
-14. After this is done, you can start the backend (server) by running the following command in the same terminal that you ran the code in step 13. 
-
-```
-nodemon server.js
-
-```
-
-
-15. Then you can start the frontend part of the project by running the following command in the terminal that is in the directory called "frontend"
-
-```
-npm start
-
-```
-
-
-To view the server side of the project, visit the following link:
-
-backend: [Express App Backend with Routes Defined & PostgreSQL Database](http://localhost:7777/)
-
-To view the client (USER) side of the project, visit the following link:
-
-
-frontend: [React App](http://localhost:3000/)
+![Joseph's Dream in Quran Surah Yusuf verse 101](dreamQuran.png "Joseph's Dream in Quran") -->

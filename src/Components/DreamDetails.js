@@ -149,7 +149,7 @@ window.localStorage.setItem('dataJSON', updatedArray);
       setthecolor("green");
     }
     if (dream.good_dream === "bad") {
-      setthecolor("orange");
+      setthecolor("red");
     }
     if (dream.good_dream === "neutral") {
       setthecolor("black");
