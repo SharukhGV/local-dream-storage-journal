@@ -57,3 +57,9 @@ Here is an excerpt from a translation from the Quran:
 [Joseph's Dream - https://quran.com/](https://quran.com/12?startingVerse=101)
 
 ![Joseph's Dream in Quran Surah Yusuf verse 101](dreamQuran.png "Joseph's Dream in Quran") -->
+
+## Maximum Input ##
+
+This site can take a maximum of approximately 5,000,000 characters in modern browser interfaces such as Chrome and FireFox. Anything more than this may lead to the app malfunctioning. This is because localStorage is used to save data locally on the browser instead of an external server. 
+
+See "Find the maximum length of a single string that can be stored in localStorage" solution to problem in the following  [Stack OverFlow link](https://stackoverflow.com/questions/2989284/what-is-the-max-size-of-localstorage-values)
