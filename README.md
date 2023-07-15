@@ -63,3 +63,25 @@ Here is an excerpt from a translation from the Quran:
 This site can take a maximum of approximately 5,000,000 characters in modern browser interfaces such as Chrome and FireFox. Anything more than this may lead to the app malfunctioning. This is because localStorage is used to save data locally on the browser instead of an external server. 
 
 See "Find the maximum length of a single string that can be stored in localStorage" solution to problem in the following  [Stack OverFlow link](https://stackoverflow.com/questions/2989284/what-is-the-max-size-of-localstorage-values)
+
+## ChatGPT Answer on LocalStorage Input Value Max Capacity ##
+
+According to ChatGPT's answer, it is similar if not the same:
+
+The amount of data that can be stored in 10 MB of local storage in JavaScript depends on several factors, including the specific browser implementation and any other data stored in the local storage.
+
+In general, the maximum size of data that can be stored in local storage is around 5-10 MB. However, it's important to note that the actual amount of data you can store may be slightly less than the available space due to browser limitations and overhead.
+
+When it comes to storing data in the form of strings, JavaScript uses the UTF-16 encoding, where each character is represented by 16 bits (2 bytes). This means that each character in a string will occupy 2 bytes of memory.
+
+To estimate the amount of data you can store in 10 MB, you can use the following calculation:
+
+10 MB = 10 * 1024 * 1024 bytes ≈ 10,485,760 bytes
+
+Since each character in a string occupies 2 bytes, you can divide the available bytes by 2 to get an approximate number of characters:
+
+10,485,760 bytes / 2 = 5,242,880 characters
+
+Keep in mind that this is just an estimate, and the actual number of characters you can store may be slightly lower due to additional overhead and browser-specific limitations.
+
+It's also worth noting that local storage is meant for storing small amounts of data such as preferences, settings, or small pieces of user-specific information. If you need to store a large amount of data or complex data structures, you might want to consider alternative storage options such as databases or file systems.
