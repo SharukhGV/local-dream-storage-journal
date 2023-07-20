@@ -3,7 +3,7 @@ import thedreamsound from './../../src/dreamsound.mp3';
 
 const DreamSound = () => {
   return (
-    <div>
+    <div className='audioCard'>
       <audio src={thedreamsound} type="audio/mp3" controls />
     </div>
   );

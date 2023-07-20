@@ -42,6 +42,17 @@ function Dreams(){
 
 
       return (
+
+        <div class="background-container">
+          <div className="cardContact">
+
+                  <div className="spacerDIV"></div>
+        <div className="spacerDIV"></div>
+
+                  <div className="spacerDIV"></div>
+
+<div className="cardContact">
+
         <table className="thedreamtable">
           <thead>
     <tr>
@@ -60,6 +71,10 @@ function Dreams(){
               })}
          
         </table>
+        <div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+       </div> </div></div>
       );
     }
     

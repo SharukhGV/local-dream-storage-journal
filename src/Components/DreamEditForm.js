@@ -128,6 +128,11 @@ navigate(`/dreams/${id}`)
   };
 
   return (
+    <div class="background-container">
+    <div className="cardContact">
+    <div className="spacerDIV"></div>
+
+    <div className="spacerDIV"></div>
     <div className="edit">
       <form onSubmit={handleSubmit}>
         <input
@@ -204,6 +209,10 @@ navigate(`/dreams/${id}`)
         <button>Nevermind!</button>
       </Link>
     </div>
+    <div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+    </div></div>
   );
 }
 

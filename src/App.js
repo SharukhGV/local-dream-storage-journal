@@ -2,14 +2,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // import { Switch } from "react-router-dom";
 import Nav from "./Components/Nav";
-import Edit from "./Pages/Edit";
+// import Edit from "./Pages/Edit";
 import NotFound from "./Pages/NotFound";
 import Home from "./Pages/Home";
-import Index from "./Pages/Index";
-import NewForm from "./Pages/NewForm";
-import Show from "./Pages/Show";
+// import Index from "./Pages/Index";
+// import NewForm from "./Pages/NewForm";
+// import Show from "./Pages/Show";
 import "./App.css";
 import { useEffect } from "react";
+import Dreams from "./Components/Dreams";
+// import Dream from "./Components/Dream";
+import DreamDetails from "./Components/DreamDetails";
+import DreamNewForm from "./Components/DreamNewForm";
+import DreamEditForm from "./Components/DreamEditForm";
 // var dataJSON =  require("./Components/data.json")
 
 
@@ -39,16 +44,16 @@ useEffect(()=>{
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route  path="/dreams" element={<Index />}>
+        <Route  path="/dreams" element={<Dreams />}>
         </Route>
 
-        <Route  path="/dreams/:id" element={<Show />}>
+        <Route  path="/dreams/:id" element={<DreamDetails />}>
         </Route>
 
-        <Route  path="/dreams/:id/edit" element={<Edit />}>
+        <Route  path="/dreams/:id/edit" element={<DreamEditForm />}>
         </Route>
 
-        <Route  path="/dreams/new" element={<NewForm />}></Route>
+        <Route  path="/dreams/new" element={<DreamNewForm />}></Route>
 
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -224,10 +224,15 @@ window.localStorage.setItem('dataJSON', updatedArray);
 
 
   return (
+    <div class="background-container">
+                  <div className="spacerDIV"></div>
+                  <div className="spacerDIV"></div>
+                  <div className="spacerDIV"></div>
+
     <article className="cardContact" key={dream9.id}>
       <fieldset style={textcoloring}>
         <legend>
-          <strong>Everyone has Dreams...</strong>
+          <strong className="everyoneHASdreams">Everyone has Dreams...</strong>
         </legend>
 
         <table className="thedreamtableSHOW">
@@ -259,9 +264,9 @@ window.localStorage.setItem('dataJSON', updatedArray);
             <td>Night-Time Dream: </td>
             <td>
               {night9 ? (
-                <div>🌙 Yes, Night Time</div>
+                <div className="spacerDIV">🌙 Yes, Night Time</div>
               ) : (
-                <div>No, Day Time ☀️</div>
+                <div className="spacerDIV">No, Day Time ☀️</div>
               )}
             </td>
           </tr>
@@ -288,7 +293,12 @@ window.localStorage.setItem('dataJSON', updatedArray);
 
     
     </article>
+    <div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+    </div>
   );
+  
 }
 
 export default DreamDetails;

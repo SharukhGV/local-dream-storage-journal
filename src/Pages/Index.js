@@ -1,12 +1,12 @@
-import Dreams from "../Components/Dreams";
+// import Dreams from "../Components/Dreams";
 
-function Index() {
-  return (
-    <div className="Index">
-      <h2>Index</h2>
-      <Dreams />
-    </div>
-  );
-}
+// function Index() {
+//   return (
+//     <div className="Index">
+//       <h2>Index</h2>
+//       <Dreams />
+//     </div>
+//   );
+// }
 
-export default Index;
+// export default Index;

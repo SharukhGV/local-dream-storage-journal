@@ -1,13 +1,13 @@
-import DreamDetails from "../Components/DreamDetails";
+// import DreamDetails from "../Components/DreamDetails";
 
-function Show() {
+// function Show() {
   
-  return (
-    <div className="Show">
-      <h2>Show</h2>
-      <DreamDetails />
-    </div>
-  );
-}
+//   return (
+//     <div className="Show">
+//       <h2>Show</h2>
+//       <DreamDetails />
+//     </div>
+//   );
+// }
 
-export default Show;
+// export default Show;

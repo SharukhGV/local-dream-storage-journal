@@ -10,7 +10,7 @@ function Nav() {
 
   let activeStyle = {
     textDecoration: "underline",
-    color: "white",
+    color: "beige",
   };
 
   let nonactiveStyle = {
@@ -42,7 +42,7 @@ function Nav() {
 // }, [])
 
     return (
-        <nav>
+        <nav className="navBar">
          
           <ul className="no-bullets">
            <li> <NavLink

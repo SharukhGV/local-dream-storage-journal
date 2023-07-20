@@ -6,15 +6,19 @@
     padding-right: 200px;
     font-size: 20px;
     text-align: center;
-    font-family:Arial, Helvetica, sans-serif
-  
-  
+    font-family:Arial, Helvetica, sans-serif;
+  background-color: #f2f2f200;
+  color: #ddd;
   }
+  body{color: white;}
 
   .hiddenMiddleRoute{
     display:none;
   }
-  
+  audio::-webkit-media-controls-panel{
+    background-color: #30e73900;
+  }
+
   .cardContact{
     text-align: center;
     font-size: medium;
@@ -22,8 +26,25 @@
     border-radius: 10px;
     padding: 10px;
     margin: auto;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;   
+    background-color: #8104aa27;
+    z-index: 0;
+    
+
   }
+  
+  #root{
+    background-color: #cccccc00;
+    z-index:0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-radius:30px ;
+  text-align: center;
+  }
+/* .navBar{
+  background-color: #4caf4f03;
+} */
+nav{background-color: #cccccc1a;  }
+
 
   .new {
     text-align: center;
@@ -32,10 +53,12 @@
 
   li {display: inline-block;}
 
+  .spacerDIV{background-color: #0000000e;}
 
+  
 .no-bullets {
   list-style-type: none;
-  background-color: rgb(124, 0, 112);
+  background-color: rgba(47, 4, 43, 0);
   padding: 20px;
 }
 .links{
@@ -56,8 +79,13 @@
     font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  
   }
 
+  a {
+    color: rgb(255, 208, 0);
+}
+  :visited{color: rgb(255, 67, 99)}
 
   .thedreamtable td, #customers th {
   border: 1px solid #ddd;
@@ -66,7 +94,7 @@
 
 .thedreamtable tr:nth-child(even){background-color: #f2f2f2;}
 
-.thedreamtable tr:hover {background-color: #ddd;}
+.thedreamtable tr:hover {background-color: #dddddd54;}
 
 .thedreamtable th {
   padding-top: 12px;
@@ -83,9 +111,11 @@ input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid #00ff37c5;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: #3915456f;
+  color: whitesmoke;
 }
 
 input[type=date], select {
@@ -93,9 +123,12 @@ input[type=date], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid  #00ff37c5;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: #8104aa6d;
+  color: whitesmoke;
+
 }
 
 input[type=submit] {
@@ -115,7 +148,7 @@ input[type=submit]:hover {
 
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #00000063;
   padding: 20px;
 }
 
@@ -130,18 +163,19 @@ div {
 .thedreamtableSHOW  td, #customers th {
   border: 1px solid #ddd;
   padding: 8px;
+  color:whitesmoke
 }
 
-.thedreamtableSHOW  tr:nth-child(even){background-color: #f2f2f2}
+.thedreamtableSHOW  tr:nth-child(even){background-color: #2e08411b}
 .thedreamtableSHOW  tr th {text-align: center;}
 
-.thedreamtableSHOW tr:hover {background-color: #ddd;}
+.thedreamtableSHOW tr:hover {background-color: #dc55d363;}
 
 .thedreamtableSHOW  th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #895bcf;
+  background-color: #895bcf86;
   color: white;
 }
 
@@ -225,11 +259,14 @@ legend {
     padding: 10px;
     margin: auto;
     font-family: 'Courier New', Courier, monospace;
-  }
+    z-index: 0;
+    color: beige;
 
+  }
 
   .links{
     font-size: small;
+    
   }
 
 
@@ -275,4 +312,132 @@ legend {
 /* padding-left: 100px;
 padding-right: 100px; */
 
+}
+
+
+
+
+
+/* *********************************************************** */
+
+/* https://codepen.io/agoodwin/pen/NMJoER */
+/*pure CSS twinkling stars background
+Anastasia Goodwin */
+
+
+
+@keyframes move-background {
+  from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+@-webkit-keyframes move-background {
+  from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+@-moz-keyframes move-background {    
+	from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+    @-webkit-keyframes move-background {
+	from {
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	to { 
+		-webkit-transform: translate3d(1000px, 0px, 0px);
+	}
+}
+
+.background-container{
+	position: fixed;
+	top: 0;
+	left:0;
+	bottom: 0;
+	right: 0;
+  z-index: -1;
+}
+
+.stars {
+
+ background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+  	z-index: -4;
+}
+
+.twinkling{
+
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+    
+    -moz-animation:move-background 70s linear infinite;
+  -ms-animation:move-background 70s linear infinite;
+  -o-animation:move-background 70s linear infinite;
+  -webkit-animation:move-background 70s linear infinite;
+  animation:move-background 70s linear infinite;
+	
+}
+
+.clouds{
+
+	width:10000px;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+   -moz-animation:move-background 150s linear infinite;
+  -ms-animation:move-background 150s linear infinite;
+  -o-animation:move-background 150s linear infinite;
+  -webkit-animation:move-background 150s linear infinite;
+  animation:move-background 150s linear infinite;
+}
+img{
+
+  height: 70vh;
+  width:70vh;
+  position: absolute;
+  z-index: -1;
+  right: 20px;
+}
+
+
+.audioCard{
+  background-color: #45a04916;
+}
+
+.edit{
+  background-color: #8104aa30;
+}
+
+.everyoneHASdreams{
+  color:beige;
 }

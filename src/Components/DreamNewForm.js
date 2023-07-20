@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function DreamNewForm() {
   // const [arrayObjectDATA, setarrayObjectDATA] = useState([])
+  const date7 = new Date();
 
   // const [htmlId] = useId();
   const [dream, setdream] = useState({
@@ -18,7 +19,7 @@ function DreamNewForm() {
     good_dream: "",
     dream_description: "",
     topic: "",
-    date: "2000-01-01",
+    date: date7,
     night: "true",
   });
 
@@ -116,6 +117,12 @@ navigate("/dreams")
   // };
   // console.log(localDream)
   return (
+
+    <div class="background-container">
+<div className="cardContact">
+
+<div className="spacerDIV"></div>
+       <div className="spacerDIV"></div>
     <div className="edit">
       <form onSubmit={handleSubmit}>
         {/* <form> */}
@@ -198,6 +205,10 @@ navigate("/dreams")
         <button>Go Back to All Dreams!</button>
       </Link>
     </div>
+    <div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+    </div></div>
   );
 }
 
