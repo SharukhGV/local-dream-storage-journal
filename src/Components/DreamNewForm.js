@@ -118,10 +118,9 @@ navigate("/dreams")
   // console.log(localDream)
   return (
 
-    <div class="background-container">
 <div className="cardContact">
 
-<div className="spacerDIV"><strong>New Dream Form</strong></div>
+<div className="spacerDIV"><strong>📥 NEW DREAM FORM 🧾</strong></div>
        <div className="spacerDIV"></div>
     <div className="edit">
       <form onSubmit={handleSubmit}>
@@ -204,10 +203,7 @@ navigate("/dreams")
       <Link to={`/dreams`}>
         <button>Go Back to All Dreams!</button>
       </Link>
-    </div>
-    <div class="stars"></div>
-<div class="twinkling"></div>
-<div class="clouds"></div>
+    
     </div></div>
   );
 }

@@ -224,7 +224,7 @@ window.localStorage.setItem('dataJSON', updatedArray);
 
 
   return (
-    <div class="background-container">
+    <div>
                   <div className="spacerDIV"></div>
 
     <article  className="cardContact" key={dream9.id}>

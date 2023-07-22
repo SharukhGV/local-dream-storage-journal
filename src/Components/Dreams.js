@@ -43,11 +43,10 @@ function Dreams(){
 
       return (
 
-        <div class="background-container">
           <div className="cardContact">
 
                   <div className="spacerDIV"></div>
-        <div  className="spacerDIV"><strong>Dream Catcher Table</strong></div>
+        <div  className="spacerDIV"><strong>🛏️ DREAM VAULT 💭</strong></div>
 
                   <div className="spacerDIV"></div>
 
@@ -74,7 +73,7 @@ function Dreams(){
         <div class="stars"></div>
 <div class="twinkling"></div>
 <div class="clouds"></div>
-       </div> </div></div>
+       </div> </div>
       );
     }
     
