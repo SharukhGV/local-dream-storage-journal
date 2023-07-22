@@ -74,7 +74,7 @@ const[dream9, setdream9] = useState([])
   // const API = process.env.REACT_APP_API_URL;
   // const [dream, setdream] = useState([]);
   const navigate = useNavigate();
-  const [thecolor, setthecolor] = useState("black");
+  const [thecolor, setthecolor] = useState("white");
 
   // let newObj = JSON.parse(window.localStorage.getItem("dataJSON"));
 
@@ -194,13 +194,13 @@ window.localStorage.setItem('dataJSON', updatedArray);
 
   useEffect(() => {
     if (dream.good_dream === "good") {
-      setthecolor("green");
+      setthecolor("#6dff75");
     }
     if (dream.good_dream === "bad") {
       setthecolor("red");
     }
     if (dream.good_dream === "neutral") {
-      setthecolor("black");
+      setthecolor("white");
     }
   }, [dream.good_dream]);
 
@@ -226,13 +226,11 @@ window.localStorage.setItem('dataJSON', updatedArray);
   return (
     <div class="background-container">
                   <div className="spacerDIV"></div>
-                  <div className="spacerDIV"></div>
-                  <div className="spacerDIV"></div>
 
-    <article className="cardContact" key={dream9.id}>
-      <fieldset style={textcoloring}>
+    <article  className="cardContact" key={dream9.id}>
+      <fieldset >
         <legend>
-          <strong className="everyoneHASdreams">Everyone has Dreams...</strong>
+          <strong style={textcoloring} className="everyoneHASdreams">Everyone has Dreams...</strong>
         </legend>
 
         <table className="thedreamtableSHOW">
@@ -250,7 +248,7 @@ window.localStorage.setItem('dataJSON', updatedArray);
           </tr>
           <tr>
             <td>Emotions after Waking up:</td>
-            <td>{dream9.good_dream}</td>
+            <td style={textcoloring}>{dream9.good_dream}</td>
           </tr>
           <tr>
             <td>Description of Dream</td>
@@ -261,12 +259,12 @@ window.localStorage.setItem('dataJSON', updatedArray);
             <td>{dream9.topic}</td>
           </tr>
           <tr>
-            <td>Night-Time Dream: </td>
+            <td>Reoccuring Dream: </td>
             <td>
               {night9 ? (
-                <div className="spacerDIV">🌙 Yes, Night Time</div>
+                <div className="spacerDIV">☑️ Yes</div>
               ) : (
-                <div className="spacerDIV">No, Day Time ☀️</div>
+                <div className="spacerDIV">❌ No</div>
               )}
             </td>
           </tr>

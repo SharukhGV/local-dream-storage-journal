@@ -130,7 +130,7 @@ navigate(`/dreams/${id}`)
   return (
     <div class="background-container">
     <div className="cardContact">
-    <div className="spacerDIV"></div>
+    <div className="spacerDIV"><strong>Edit Dream Log Form</strong></div>
 
     <div className="spacerDIV"></div>
     <div className="edit">
@@ -191,7 +191,7 @@ navigate(`/dreams/${id}`)
           onChange={handleTextChange}
         />
 
-        <label htmlFor="night">Was it Night Time:</label>
+        <label htmlFor="night">Reoccuring Dream:</label>
 
         <select
           onChange={handleTextChange}

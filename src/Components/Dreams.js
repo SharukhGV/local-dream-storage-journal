@@ -47,7 +47,7 @@ function Dreams(){
           <div className="cardContact">
 
                   <div className="spacerDIV"></div>
-        <div className="spacerDIV"></div>
+        <div  className="spacerDIV"><strong>Dream Catcher Table</strong></div>
 
                   <div className="spacerDIV"></div>
 

@@ -60,9 +60,7 @@ const Home = () => {
     //     });
     // }
     return(
-        <div class="background-container">
       
-
 <div className="cardContact">
 
     <div className="homePAge">
@@ -95,10 +93,7 @@ const Home = () => {
 
 
   </div>
-    <div class="stars"></div>
-<div class="twinkling"></div>
-<div class="clouds"></div>
-    </div>
+
     )}
     
     export default Home

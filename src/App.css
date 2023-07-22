@@ -8,9 +8,8 @@
     text-align: center;
     font-family:Arial, Helvetica, sans-serif;
   background-color: #f2f2f200;
-  color: #ddd;
+  color:white
   }
-  body{color: white;}
 
   .hiddenMiddleRoute{
     display:none;
@@ -27,7 +26,8 @@
     padding: 10px;
     margin: auto;
     font-family: 'Courier New', Courier, monospace;   
-    background-color: #8104aa27;
+    background-color: #0000001e;
+    color:beige;
     z-index: 0;
     
 
@@ -43,7 +43,7 @@
 /* .navBar{
   background-color: #4caf4f03;
 } */
-nav{background-color: #cccccc1a;  }
+nav{background-color: #504ab680;  }
 
 
   .new {
@@ -100,8 +100,7 @@ nav{background-color: #cccccc1a;  }
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #8104aa;
-  color: white;
+  background-color: #0704aa;
 }
 
 
@@ -111,10 +110,10 @@ input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #00ff37c5;
+  border: 3px solid #555555;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color: #3915456f;
+  background-color: #391545df;
   color: whitesmoke;
 }
 
@@ -123,10 +122,10 @@ input[type=date], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid  #00ff37c5;
+  border: 3px solid #555;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color: #8104aa6d;
+  background-color: #555;
   color: whitesmoke;
 
 }
@@ -166,7 +165,7 @@ div {
   color:whitesmoke
 }
 
-.thedreamtableSHOW  tr:nth-child(even){background-color: #2e08411b}
+.thedreamtableSHOW  tr:nth-child(even){background-color: #0814411b}
 .thedreamtableSHOW  tr th {text-align: center;}
 
 .thedreamtableSHOW tr:hover {background-color: #dc55d363;}
@@ -176,7 +175,6 @@ div {
   padding-bottom: 12px;
   text-align: center;
   background-color: #895bcf86;
-  color: white;
 }
 
 .thedreamtable  th {
@@ -184,7 +182,6 @@ div {
   padding-bottom: 12px;
   text-align: center;
   background-color: #895bcf;
-  color: white;
 }
 
 .thedreamtable  tr {
@@ -260,7 +257,6 @@ legend {
     margin: auto;
     font-family: 'Courier New', Courier, monospace;
     z-index: 0;
-    color: beige;
 
   }
 
@@ -316,119 +312,18 @@ padding-right: 100px; */
 
 
 
-
-
-/* *********************************************************** */
-
-/* https://codepen.io/agoodwin/pen/NMJoER */
-/*pure CSS twinkling stars background
-Anastasia Goodwin */
+/*  */
 
 
 
-@keyframes move-background {
-  from {
-		-webkit-transform: translate3d(0px, 0px, 0px);
-	}
-	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
-	}
+html:{background-color: black;}
+body{
+  background-image: url("stars.png");
+  background-repeat: repeat;
 }
-@-webkit-keyframes move-background {
-  from {
-		-webkit-transform: translate3d(0px, 0px, 0px);
-	}
-	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
-	}
+img {
+  opacity: 0.9;
 }
-
-@-moz-keyframes move-background {    
-	from {
-		-webkit-transform: translate3d(0px, 0px, 0px);
-	}
-	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
-	}
-}
-
-    @-webkit-keyframes move-background {
-	from {
-		-webkit-transform: translate3d(0px, 0px, 0px);
-	}
-	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
-	}
-}
-
-.background-container{
-	position: fixed;
-	top: 0;
-	left:0;
-	bottom: 0;
-	right: 0;
-  z-index: -1;
-}
-
-.stars {
-
- background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
- position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	display: block;
-  	z-index: -4;
-}
-
-.twinkling{
-
-	width:10000px;
-	height: 100%;
-	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-	background-size: 1000px 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -2;
-    
-    -moz-animation:move-background 70s linear infinite;
-  -ms-animation:move-background 70s linear infinite;
-  -o-animation:move-background 70s linear infinite;
-  -webkit-animation:move-background 70s linear infinite;
-  animation:move-background 70s linear infinite;
-	
-}
-
-.clouds{
-
-	width:10000px;
-	height: 100%;
-	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
-	background-size: 1000px 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-
-   -moz-animation:move-background 150s linear infinite;
-  -ms-animation:move-background 150s linear infinite;
-  -o-animation:move-background 150s linear infinite;
-  -webkit-animation:move-background 150s linear infinite;
-  animation:move-background 150s linear infinite;
-}
-img{
-
-  height: 70vh;
-  width:70vh;
-  position: absolute;
-  z-index: -1;
-  right: 20px;
-}
-
 
 .audioCard{
   background-color: #45a04916;
@@ -438,6 +333,5 @@ img{
   background-color: #8104aa30;
 }
 
-.everyoneHASdreams{
-  color:beige;
-}
+
+

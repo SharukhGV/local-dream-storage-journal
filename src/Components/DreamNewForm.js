@@ -121,7 +121,7 @@ navigate("/dreams")
     <div class="background-container">
 <div className="cardContact">
 
-<div className="spacerDIV"></div>
+<div className="spacerDIV"><strong>New Dream Form</strong></div>
        <div className="spacerDIV"></div>
     <div className="edit">
       <form onSubmit={handleSubmit}>
@@ -184,7 +184,7 @@ navigate("/dreams")
           required
         />
 
-        <label htmlFor="night">Was it Night Time:</label>
+        <label htmlFor="night">Reoccuring Dream:</label>
 
         <select
           onChange={handleTextChange}
