@@ -271,7 +271,7 @@ window.localStorage.setItem('dataJSON', updatedArray);
             <td>{dream9.topic}</td>
           </tr>
           <tr>
-            <td>Reoccuring Dream: </td>
+            <td>Night Time Dream: </td>
             <td>
               {night9 ? (
                 <div className="spacerDIV">☑️ Yes</div>

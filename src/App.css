@@ -316,9 +316,6 @@ padding-right: 100px; */
 
 
 
-img {
-  opacity: 0.9;
-}
 
 .audioCard{
   background-color: #45a04916;
@@ -447,3 +444,11 @@ img {
 .buttonPDF{
   background-color: #ffffff00;
 }
+
+/* 
+.dreamLogo{width: 30px;
+max-height: auto;} */
+
+img{
+  max-width: 100%;
+  height: auto;}
