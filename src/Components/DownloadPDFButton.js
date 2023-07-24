@@ -1,6 +1,6 @@
 import React from 'react';
 import jsPDF from 'jspdf';
-
+ //CHATGPT GENERATION OF PDF DOCUMENT DOWNLOADING FOR LOCALSTORAGE ON APP
 const DownloadPDFButton = () => {
   const handleDownloadPDF = () => {
     // Step 1: Retrieve data from local storage
