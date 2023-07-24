@@ -230,7 +230,11 @@ window.localStorage.setItem('dataJSON', updatedArray);
                   <div className="spacerDIV"></div>
 
     <article  className="cardContact" key={dream9.id}>
-
+    <div class="background-container">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""></img>
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div></div>
     <div class="background-container">
 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""></img>
 <div class="stars"></div>

@@ -91,7 +91,7 @@ nav{background-color: #504ab680;  }
   padding: 8px;
 }
 
-.thedreamtable tr:nth-child(even){background-color: #f2f2f2;}
+.thedreamtable tr:nth-child(even){background-color: #00000000;}
 
 .thedreamtable tr:hover {background-color: #dddddd54;}
 
@@ -325,7 +325,7 @@ img {
 }
 
 .edit{
-  background-color: #8104aa30;
+  background-color: #8104aa00;
 }
 
 
@@ -441,4 +441,9 @@ img {
 .audioCard{
 
   background-color: rgba(0, 0, 0, 0);
+}
+
+
+.buttonPDF{
+  background-color: #ffffff00;
 }
