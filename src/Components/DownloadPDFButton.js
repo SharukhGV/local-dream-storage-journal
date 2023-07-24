@@ -11,9 +11,19 @@ const DownloadPDFButton = () => {
 
     // Step 3: Generate the PDF
     const doc = new jsPDF();
-    doc.text('Local Storage Data', 10, 10); // Add a title
-    doc.text(formattedData, 10, 20); // Add the formatted data to the PDF
+    doc.setFontSize(10); // Adjust font size
 
+    const lines = doc.splitTextToSize(formattedData, doc.internal.pageSize.getWidth() - 20);
+    let cursorY = 10;
+
+    lines.forEach((line) => {
+      doc.text(10, cursorY, line);
+      cursorY += 7; // Adjust this value to control the line spacing
+      if (cursorY >= doc.internal.pageSize.getHeight() - 10) {
+        doc.addPage();
+        cursorY = 10;
+      }
+    });
     // Step 4: Offer the PDF download
     doc.save('local_storage_data.pdf');
   };
