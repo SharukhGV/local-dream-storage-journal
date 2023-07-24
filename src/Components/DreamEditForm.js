@@ -197,7 +197,7 @@ navigate(`/dreams/${id}`)
           onChange={handleTextChange}
         />
 
-        <label htmlFor="night">Reoccuring Dream:</label>
+        <label htmlFor="night">Night Time Dream:</label>
 
         <select
           onChange={handleTextChange}
