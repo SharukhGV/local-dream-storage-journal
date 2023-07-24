@@ -225,9 +225,17 @@ window.localStorage.setItem('dataJSON', updatedArray);
 
   return (
     <div>
+
+      
                   <div className="spacerDIV"></div>
 
     <article  className="cardContact" key={dream9.id}>
+
+    <div class="background-container">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""></img>
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div></div>
       <fieldset >
         <legend>
           <strong style={textcoloring} className="everyoneHASdreams">Everyone has Dreams...</strong>
@@ -291,9 +299,7 @@ window.localStorage.setItem('dataJSON', updatedArray);
 
     
     </article>
-    <div class="stars"></div>
-<div class="twinkling"></div>
-<div class="clouds"></div>
+
     </div>
   );
   

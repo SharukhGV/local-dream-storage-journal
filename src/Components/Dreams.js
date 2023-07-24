@@ -44,11 +44,16 @@ function Dreams(){
       return (
 
           <div className="cardContact">
-
-                  <div className="spacerDIV"></div>
+<div class="background-container">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""></img>
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+</div>
+                  {/* <div className="spacerDIV"></div> */}
         <div  className="spacerDIV"><strong>🛏️ DREAM VAULT 💭</strong></div>
 
-                  <div className="spacerDIV"></div>
+                  {/* <div className="spacerDIV"></div> */}
 
 <div className="cardContact">
 
@@ -70,10 +75,7 @@ function Dreams(){
               })}
          
         </table>
-        <div class="stars"></div>
-<div class="twinkling"></div>
-<div class="clouds"></div>
-       </div> </div>
+     </div></div>
       );
     }
     
