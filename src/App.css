@@ -329,8 +329,10 @@ padding-right: 100px; */
 
 /* PURE CSS TWINKLING STARS BACKGROUND */
 
-
-
+/* CodePen
+pure CSS twinkling stars background
+Anastasia Goodwin */
+/* The code below is by Anastasia Goodwin (begin) */
 
 @keyframes move-background {
   from {
@@ -430,9 +432,12 @@ padding-right: 100px; */
   z-index: 3;
   right: 20px;
 } */
+/* The code below is by Anastasia Goodwin (end) */
 
 /* pure CSS twinkling stars background */
-
+/* CodePen Home
+pure CSS twinkling stars background
+Anastasia Goodwin */
 
 
 .audioCard{
