@@ -1,6 +1,7 @@
 // import axios from "axios";
 import { useEffect,useState } from "react";
 import Dream from "./Dream";
+import vault from "./vault.png"
 // var dataJSON =  require("./data.json")
 // import { useNavigate } from "react-router-dom";
 function Dreams(){
@@ -46,8 +47,8 @@ function Dreams(){
           <div className="cardContact">
 
                   {/* <div className="spacerDIV"></div> */}
-        <div  className="spacerDIV"><strong>🛏️ DREAM VAULT 💭</strong></div>
-
+        {/* <div  className="spacerDIV"><strong>🛏️ DREAM VAULT 💭</strong></div> */}
+<img src={vault} alt="Dram Title for All dreams called Dream Vault"></img>
                   {/* <div className="spacerDIV"></div> */}
 
 <div className="cardContact">
