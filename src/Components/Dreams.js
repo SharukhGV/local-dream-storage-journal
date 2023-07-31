@@ -46,10 +46,8 @@ function Dreams(){
 
           <div className="cardContact">
 
-                  {/* <div className="spacerDIV"></div> */}
-        {/* <div  className="spacerDIV"><strong>🛏️ DREAM VAULT 💭</strong></div> */}
+                 
 <img src={vault} alt="Dram Title for All dreams called Dream Vault"></img>
-                  {/* <div className="spacerDIV"></div> */}
 
 <div className="cardContact">
 <div class="background-container">
