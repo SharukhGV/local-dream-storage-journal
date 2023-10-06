@@ -29,7 +29,7 @@ function UploadJSON({setFileData}) {
   };
 
   return (
-    <div>
+    <>
       <input
         type="file"
         accept=".json"
@@ -37,8 +37,8 @@ function UploadJSON({setFileData}) {
         style={{ display: 'none' }}
         ref={fileInputRef}
       />
-      <button style={{backgroundColor:"lavender", color:"black"}} onClick={triggerFileInput}>📩 Upload JSON File for Repopulation ↩️</button>
-    </div>
+      <button style={{backgroundColor:"orange", color:"black"}} onClick={triggerFileInput}>📩 Upload JSON File for Repopulation ↩️</button>
+    </>
   );
 }
 

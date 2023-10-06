@@ -123,8 +123,8 @@ if(!!fileData){
    
       {/* <button onClick={repopulateComponent}>Repopulate Data</button> */}
 
-      <button
-        style={{ backgroundColor: "lavender", color: "black" }}
+      <button className='buttonPDF'
+        style={{ backgroundColor: "red", color: "white" }}
         onClick={repopulateComponent}
       >
        ⬇💥 Erase and Repopulate Data 📂

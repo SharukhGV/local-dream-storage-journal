@@ -16,7 +16,7 @@ function DownloadJSON({ fileName }) {
   };
 
   return (
-    <button  style={{ backgroundColor: "lavender", color: "black" }} onClick={downloadJSON}>💻 Download JSON File for Repopulation 🌐</button>
+    <button  style={{ backgroundColor: "lavender", color: "black" }} onClick={downloadJSON}>💻 Download data.json File 🌐</button>
   );
 }
 
