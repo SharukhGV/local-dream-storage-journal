@@ -1,15 +1,25 @@
 import React from 'react';
 import jsPDF from 'jspdf';
- //CHATGPT GENERATION OF PDF DOCUMENT DOWNLOADING FOR LOCALSTORAGE ON APP
+
 const DownloadPDFButton = () => {
   const handleDownloadPDF = () => {
-    // Step 1: Retrieve data from local storage
     const dataFromLocalStorage = JSON.parse(localStorage.getItem('dataJSON'));
 
-    // Step 2: Format the data (you can adjust this based on your data structure)
-    const formattedData = JSON.stringify(dataFromLocalStorage, null, 2);
+    const formatEntry = (entry) => {
+      return `
+        ID: ${entry.id}
+        Name: ${entry.name}
+        Good Dream: ${entry.good_dream}
+        Description: ${entry.dream_description}
+        Topic: ${entry.topic}
+        Date: ${entry.date}
+        Night: ${entry.night}
+        -------------------------------
+      `;
+    };
 
-    // Step 3: Generate the PDF
+    const formattedData = dataFromLocalStorage.map(formatEntry).join('\n');
+
     const doc = new jsPDF();
     doc.setFontSize(10); // Adjust font size
 
@@ -18,19 +28,18 @@ const DownloadPDFButton = () => {
 
     lines.forEach((line) => {
       doc.text(10, cursorY, line);
-      cursorY += 7; // Adjust this value to control the line spacing
+      cursorY += 7;
       if (cursorY >= doc.internal.pageSize.getHeight() - 10) {
         doc.addPage();
         cursorY = 10;
       }
     });
-    // Step 4: Offer the PDF download
     doc.save('local_storage_data.pdf');
   };
 
   return (
     <div className='buttonPDF'>
-      <button  onClick={handleDownloadPDF}>Download Local Storage Data as PDF</button>
+      <button style={{ backgroundColor: "lavender", color: "black" }} onClick={handleDownloadPDF}>💻 Download Local Storage Data as PDF 📝</button>
     </div>
   );
 };

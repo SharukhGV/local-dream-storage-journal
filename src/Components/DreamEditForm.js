@@ -189,13 +189,23 @@ navigate(`/dreams/${id}`)
 
         <label htmlFor="dream_description">Description of Dream:</label>
 
-        <input
+        {/* <input
           id="dream_description"
           type="text"
           name="dream_description"
           value={dream.dream_description}
           onChange={handleTextChange}
-        />
+        /> */}
+        <textarea
+  id="dream_description"
+  name="dream_description"
+  value={dream.dream_description}
+  placeholder="What is your Dream about..."
+  onChange={handleTextChange}
+  rows="5" // This specifies the number of visible text lines. Adjust as needed.
+  cols="50" // This specifies the number of visible characters per line. Adjust as needed.
+  required
+/>
 
         <label htmlFor="night">Night Time Dream:</label>
 

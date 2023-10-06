@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { useState } from "react";
 // import { Switch } from "react-router-dom";
 import Nav from "./Components/Nav";
 // import Edit from "./Pages/Edit";
@@ -25,7 +25,8 @@ import DreamEditForm from "./Components/DreamEditForm";
 // window.localStorage.setItem("dataJSON",JSON.stringify(dataJSON))
 
 function App() {
-  
+  const [fileData, setFileData] = useState(null);
+
 
 useEffect(()=>{
 
@@ -42,9 +43,9 @@ useEffect(()=>{
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home fileData={fileData} setFileData={setFileData} />} />
 
-        <Route  path="/dreams" element={<Dreams />}>
+        <Route  path="/dreams" element={<Dreams fileData={fileData} />}>
         </Route>
 
         <Route  path="/dreams/:id" element={<DreamDetails />}>

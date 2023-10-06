@@ -2,9 +2,11 @@
 import { useEffect,useState } from "react";
 import Dream from "./Dream";
 import vault from "./vault.png"
+import DownloadJSON from "./DownloadJSON";
 // var dataJSON =  require("./data.json")
 // import { useNavigate } from "react-router-dom";
-function Dreams(){
+import DownloadPDFButton from "./DownloadPDFButton";
+function Dreams({fileData}){
          const [dreams7, setdreams7] = useState([]);
 
         // const navigate = useNavigate();
@@ -73,6 +75,9 @@ function Dreams(){
               })}
          
         </table>
+        <div className="buttonPDF"><DownloadPDFButton /></div>
+        <DownloadJSON fileData={fileData} />
+
      </div></div>
       );
     }
