@@ -27,8 +27,12 @@ function Home({ fileData, setFileData }) {
     // Repopulate the component with data from localStorage
     //   const storedData = JSON.parse(localStorage.getItem('dataJSON')) || [];
 if(!!fileData){
-    window.localStorage.setItem("dataJSON", JSON.stringify(fileData));}
-    else{return null}
+    window.localStorage.setItem("dataJSON", JSON.stringify(fileData));
+    window.alert("You Have successfully Repopulated Your Dreams")
+
+}
+    else{ window.alert("Please Upload data.json File First...")
+}
   };
 
   const pixstyle = {

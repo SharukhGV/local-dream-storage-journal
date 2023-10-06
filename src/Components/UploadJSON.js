@@ -14,9 +14,11 @@ function UploadJSON({setFileData}) {
         try {
           const jsonData = JSON.parse(e.target.result);
           setFileData(jsonData);
+          window.alert("You Have successfully Uploaded a JSON file")
           // You can update your app's state or perform any other necessary actions here
         } catch (error) {
           console.error('Error parsing JSON:', error);
+          window.alert(`Error parsing JSON:', ${error}`)
         }
       };
 
