@@ -16,7 +16,7 @@ function DownloadJSON({ fileName }) {
   };
 
   return (
-    <button  style={{ backgroundColor: "lavender", color: "black" }} onClick={downloadJSON}>💻 Download data.json File 🌐</button>
+    <button  style={{ backgroundColor: "#99ff99", color: "black" }} onClick={downloadJSON}>💻 Download data.json File 🌐</button>
   );
 }
 

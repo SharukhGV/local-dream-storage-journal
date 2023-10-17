@@ -39,7 +39,7 @@ const DownloadPDFButton = () => {
 
   return (
  
-      <button style={{ backgroundColor: "lavender", color: "black" }} onClick={handleDownloadPDF}>💻 Download Data as PDF 📝</button>
+      <button style={{ backgroundColor: "#ccffff", color: "black" }} onClick={handleDownloadPDF}>💻 Download Data as PDF 📝</button>
    
   );
 };

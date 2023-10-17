@@ -1,7 +1,7 @@
 // import axios from "axios";
 import { useEffect,useState } from "react";
 import Dream from "./Dream";
-import vault from "./vault.png"
+// import vault from "./vault.png"
 import DownloadJSON from "./DownloadJSON";
 // var dataJSON =  require("./data.json")
 // import { useNavigate } from "react-router-dom";
@@ -47,9 +47,10 @@ function Dreams({fileData}){
       return (
 
           <div className="cardContact">
-
-                 
-<img src={vault} alt="Dram Title for All dreams called Dream Vault"></img>
+<h1>All Dreams</h1>
+                 <div>Your Dreams are stored locally on your browser. You can choose to download your data as a PDF (for your records) or JSON File (for reupload). To clear all dreams, you can clear the data on your browser. This app utilizes local storage instead of an external database to protect your privacy. </div>
+                 {/* <div>Source Code can be found here: https://github.com/SharukhGV/local-dream-storage-journal </div> */}
+{/* <img src={vault} alt="Dram Title for All dreams called Dream Vault"></img> */}
 
 <div className="cardContact">
 <div class="background-container">
@@ -75,7 +76,7 @@ function Dreams({fileData}){
               })}
          
         </table>
-        <div className="buttonPDF"><DownloadPDFButton /></div>
+        <DownloadPDFButton />
         <DownloadJSON fileData={fileData} />
 
      </div></div>

@@ -11,7 +11,7 @@ Everyone has dreams! This application is a digital journal built to keep track o
 ## Simplicity & Privacy ##
 
 This app was built focusing on user friendliness, simplicity, and privacy in mind. Since there is no database and everything is stored on the user's device locally, the user will not have to worry about their data being on someone else's computer. A future goals with this local app is to research forms of encryption and implement one of them. One node package that might do this is "react-secure-storage" from the site https://www.npmjs.com/package/react-secure-storage. Another goal is to allow users to download their information in the event they are upgrading their device and would need to bring their data over to their new device.
-
+<!-- 
 ## User Story ##
 
 
@@ -21,7 +21,7 @@ As a User, when I open the application, I see a home page with related informati
 
 As a User, I can also see and hear a neat little sound bit created by the developer thought to remind the user of the categorizing of dreams in this application. The main three tones of the music is low, medium, then high, thus trying to resemble the categorization of a bad dream, a neutral dream, and a good dream. These three categorizations of dreams in this application has been inspired by the developer's cultural background.
 
-As a User, I see different navigation links at the top of the page. Upon clicking "All Dreams", I am taken to all the dreams logged, which appears blanks before any input of dreams from the "New Form" page, found by clicking the "New Form" link at the top of the page.
+As a User, I see different navigation links at the top of the page. Upon clicking "All Dreams", I am taken to all the dreams logged, which appears blanks before any input of dreams from the "New Form" page, found by clicking the "New Form" link at the top of the page. -->
 
 ## Maximum Input Research ##
 
