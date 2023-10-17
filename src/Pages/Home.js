@@ -36,7 +36,10 @@ if(!!fileData){
   };
 
   const pixstyle = {
-    fontSize: "15px",
+    fontSize: "10px",
+  };
+  const pixstyle2 = {
+    fontSize: "10px",
   };
 
   // const pixstyle7 ={
@@ -103,12 +106,17 @@ if(!!fileData){
           src={dreamLogo2}
           alt="website dream catcher logo"
         ></img>
-        <p>A Dream Journal Focused on Simplicity</p>
+        <p>Simplicity. Privacy. Truth</p>
         {/* <p style={pixstyle7}>© COPYRIGHT 2023 Sharukh Velupillai</p>
     <p style={pixstyle7}>Background by Anastasia Goodwin</p> */}
 
         {/* <p style={pixstyle}>August Kekulé figured out the chemical configuration structure of Benzene. He notably says that he came about this discovery through a dream he had of a snake biting its own tail. August Kekulé, the scientist responsible for this contribution to field of organic chemistry has been proven to be correct today through various spectroscopic techniques.</p>  */}
         <p style={pixstyle}>
+        August Kekulé figured out the chemical configuration structure of Benzene. He notably says that he came about this discovery through a dream he had of a snake biting its own tail. August Kekulé, the scientist responsible for this contribution to field of organic chemistry has been proven to be correct today through various spectroscopic techniques. Other notable people who have had contributed to the modern world through inspiration from their dreams include Alfred Russel Wallace and Elias Howe who contributed to the field of Biological Populations and the invention of the sewing machine (respectively).</p>
+
+
+        <p style={pixstyle2}>
+
           Everyone has dreams! This application is a digital journal built to
           keep track of the dreams that you had while sleeping! In the section
           about good dreams, bad dreams, or neutral dreams, it is totally up to
