@@ -7,7 +7,7 @@
 // import DreamSound from "../Components/DreamSound"
 // import jsPDF from 'jspdf';
 // import DownloadPDFButton from "../Components/DownloadPDFButton";
-import dreamLogo from "./dreamlogo.png";
+import dreamLogo from "./dreamLogo.png"
 import UploadJSON from "../Components/UploadJSON";
 // import DownloadJSON from "../Components/DownloadJSON";
 function Home({ fileData, setFileData }) {
