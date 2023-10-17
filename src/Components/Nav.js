@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 // import { onAuthStateChanged } from "firebase/auth";
 // import { auth } from '../firebase';
 import brainHeart from "./brainHeart.png";
+import { Link } from "react-router-dom";
 function Nav() {
   // const [userShow, setUserShow]=useState(false)
   // const [userShowNAME, setUserShowNAME]=useState('')
@@ -42,32 +43,23 @@ function Nav() {
   // }, [])
 
   return (
+    <span> 
+    <Link to="/"><img className="brain"
+      style={{
+        maxWidth: "25px",
+        position: "absolute",
+        left: "10px",
+        top: "10px",
+        margin: "50px",
+      }}
+      src={brainHeart}
+      alt="home logo button"
+    /></Link>
     <nav className="navBar">
       <ul className="no-bullets">
         <li>
           {" "}
-          <NavLink
-            className="links"
-            to="/"
-            exact="true"
-            style={{
-              display: "inline-block",
-              verticalAlign: "bottom",
-              lineHeight: "normal",
-            }}
-          >
-            <img
-              style={{
-                maxWidth: "25px",
-                position: "absolute",
-                left: "10px",
-                top: "10px",
-                margin: "50px",
-              }}
-              src={brainHeart}
-              alt="home logo button"
-            />
-          </NavLink>
+         
         </li>
 
         <li>
@@ -123,7 +115,7 @@ function Nav() {
               Sign Up
             </NavLink></li> */}
       </ul>
-    </nav>
+    </nav></span>
   );
 }
 

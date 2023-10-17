@@ -296,7 +296,10 @@ legend {
     border-radius: 4px;
     cursor: pointer;
   }
-  
+  #dreamLogo{
+    max-width:250px;
+    max-height: auto;
+  }
 
 }
 
@@ -465,4 +468,9 @@ img{
       max-width:370px;
       max-height: auto;
     }
+  }
+
+  .brain:hover{
+background-color: rgba(255, 0, 0, 0.233);
+border-radius: 50%;
   }
