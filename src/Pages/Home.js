@@ -7,7 +7,7 @@
 // import DreamSound from "../Components/DreamSound"
 // import jsPDF from 'jspdf';
 // import DownloadPDFButton from "../Components/DownloadPDFButton";
-import dreamLogo from "./dreamLogo.png"
+import dreamLogo2 from "./dreamLogo2.png"
 import UploadJSON from "../Components/UploadJSON";
 // import DownloadJSON from "../Components/DownloadJSON";
 function Home({ fileData, setFileData }) {
@@ -98,9 +98,9 @@ if(!!fileData){
         <div className="clouds"></div>
       </div>
       <div className="homePAge">
-        <img
+        <img style={{maxWidth:'300px'}}
           id="dreamLogo"
-          src={dreamLogo}
+          src={dreamLogo2}
           alt="website dream catcher logo"
         ></img>
         <p>A Dream Journal Focused on Simplicity</p>
