@@ -98,7 +98,7 @@ if(!!fileData){
         <div className="clouds"></div>
       </div>
       <div className="homePAge">
-        <img style={{maxWidth:'300px'}}
+        <img style={{maxWidth:'270px'}}
           id="dreamLogo"
           src={dreamLogo2}
           alt="website dream catcher logo"
