@@ -125,7 +125,7 @@ navigate("/dreams")
 <div class="twinkling"></div>
 <div class="clouds"></div>
 </div>
-<div className="spacerDIV"><strong>📥 NEW DREAM FORM 🧾</strong></div>
+<h1 className="spacerDIV"><strong>New Dream</strong></h1>
     <div className="edit">
       <form onSubmit={handleSubmit}>
         {/* <form> */}

@@ -2,21 +2,21 @@ import { NavLink } from "react-router-dom";
 // import { useEffect,useState } from "react";
 // import { onAuthStateChanged } from "firebase/auth";
 // import { auth } from '../firebase';
-
+import brainHeart from "./brainHeart.png";
 function Nav() {
-
   // const [userShow, setUserShow]=useState(false)
-// const [userShowNAME, setUserShowNAME]=useState('')
+  // const [userShowNAME, setUserShowNAME]=useState('')
 
   let activeStyle = {
-    textDecoration: "underline",
+    textDecoration:"none",
     color: "beige",
   };
 
   let nonactiveStyle = {
+    textDecoration:"none",
+
     color: "limegreen",
   };
-
 
   // useEffect(()=>{
   //   onAuthStateChanged(auth, (user) => {
@@ -38,49 +38,62 @@ function Nav() {
 
   //       }
   //     });
-     
-// }, [])
 
-    return (
-        <nav className="navBar">
-         
-          <ul className="no-bullets">
-           <li> <NavLink
-              className="links"
-              to="/"
-              exact="true"
-              style={({ isActive }) =>
-              isActive ? activeStyle : nonactiveStyle
-            }
-            >
-              Home
-            </NavLink></li>
+  // }, [])
 
-            
-            <li><NavLink
-              className="links"
-              to="/dreams"
-              exact="true"
-              style={({ isActive }) =>
-              isActive ? activeStyle : nonactiveStyle}
-            >
-              All Dreams
-            </NavLink></li>
+  return (
+    <nav className="navBar">
+      <ul className="no-bullets">
+        <li>
+          {" "}
+          <NavLink
+            className="links"
+            to="/"
+            exact="true"
+            style={{
+              display: "inline-block",
+              verticalAlign: "bottom",
+              lineHeight: "normal",
+            }}
+          >
+            <img
+              style={{
+                maxWidth: "25px",
+                position: "absolute",
+                left: "10px",
+                top: "10px",
+                margin: "50px",
+              }}
+              src={brainHeart}
+              alt="home logo button"
+            />
+          </NavLink>
+        </li>
 
+        <li>
+          <NavLink
+            className="links"
+            to="/dreams"
+            exact="true"
+            style={({ isActive }) => (isActive.isActive ? activeStyle : nonactiveStyle)}
+          >
+            All Dreams
+          </NavLink>
+        </li>
 
-            
-           <li> <NavLink
-              className="links"
-              to="/dreams/new"
-              exact="true"
-              style={({ isActive }) =>
-              isActive ? activeStyle : nonactiveStyle}
-            >
-              New Form
-            </NavLink></li>
+        <li>
+          {" "}
+          <NavLink
+            className="links"
+            to="/dreams/new"
+            exact="true"
+            style={({ isActive }) => (isActive.isActive ? activeStyle : nonactiveStyle)}
+          >
+            New Form
+          </NavLink>
+        </li>
 
-
-            {/* <li> <NavLink
+        {/* <li> <NavLink
               className="links"
               to="/journal"
               exact="true"
@@ -90,7 +103,7 @@ function Nav() {
               Journal
             </NavLink></li> */}
 
-            {/* <li> <NavLink
+        {/* <li> <NavLink
               className="links"
               to="/login"
               exact="true"
@@ -100,7 +113,7 @@ function Nav() {
               Login
             </NavLink></li> */}
 
-            {/* <li> <NavLink
+        {/* <li> <NavLink
               className="links"
               to="/signup"
               exact="true"
@@ -109,13 +122,9 @@ function Nav() {
             >
               Sign Up
             </NavLink></li> */}
-  
-          </ul>
-        </nav>
-      );
-    }
-    
-
-
+      </ul>
+    </nav>
+  );
+}
 
 export default Nav;
