@@ -61,24 +61,6 @@ function DreamNewForm() {
   // https://www.npmjs.com/package/react-id-generator
 
   const navigate = useNavigate();
-  // const dreamCLOUD9 = window.localStorage.getItem(JSON.parse("dataJSON"))
-  // JSON.parse(localStoragewindow.localStorage.getItem("dataJSON")).push(dream)
-  // const [arrayValues,setArrayValues] = useState(...JSON.parse(dreamCLOUD9),dream)
-
-  // useEffect(()=>{
-  //   setArrayValues()
-  //   const arrayValues = [...dreamCLOUD9,dream]
-
-  // },[dream])
-
-  // const addDream(){
-  // const arrayValues = [...dreamCLOUD9,dream]
-
-  // useEffect(()=>{
-
-
-
-  // JSON.stringify(window.localStorage.getItem("dataJSON"))
 
   
   function handleSubmit(event) {
@@ -107,24 +89,10 @@ navigate("/dreams")
     setdream({ ...dream, [event.target.id]: event.target.value });
   };
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-
-  //   // const dreamCLOUD7 = JSON.parse()
-
-  //   addDream(dream);
-
-  // };
-  // console.log(localDream)
   return (
 
 <div className="cardContact">
-<div class="background-container">
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""></img>
-<div class="stars"></div>
-<div class="twinkling"></div>
-<div class="clouds"></div>
-</div>
+
 <h1 className="spacerDIV"><strong>New Dream</strong></h1>
     <div className="edit">
       <form onSubmit={handleSubmit}>

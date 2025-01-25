@@ -49,20 +49,6 @@ function DreamEditForm() {
 
   const navigate = useNavigate();
 
-  //   let dreamCLOUD7 = window.localStorage.getItem("dreamCLOUD")
-  // let dreamDATAarray = JSON.parse(dreamCLOUD7)
-  // dreamDATAarray
-  // console.log(dreamCLOUD9)
-  // useEffect(() => {
-  //   axios
-  //     .get(`${API}/dreams/${id}`)
-  //     .then((response) => {
-  //       console.log(response.data);
-  // var specificDREAM = dreamCLOUD9.filter(()=>{!!dreamCLOUD9.id})
-
-  //     })
-  //     .catch((e) => console.error(e));
-  // }, [id]);
 
   const handleTextChange = (event) => {
     // if (event.target.id === "night") {
@@ -117,25 +103,13 @@ function editObjectDream(){
 
 navigate(`/dreams/${id}`)
     
-    // updatedream(id, dream);
-    // console.log(dream)
-    // window.localStorage.removeItem(specificDREAM())
-
-    // dreamCLOUD9.push(dream)
-    // removeItem(specificDREAM)
-
-    // window.localStorage.setItem(dream.id)
+   
   };
 
   return (
     <div className="cardContact">
 
-<div class="background-container">
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""></img>
-<div class="stars"></div>
-<div class="twinkling"></div>
-<div class="clouds"></div>
-</div>
+
     <div className="spacerDIV"><strong>✏️ EDIT DREAM ARCHIVE 📝</strong></div>
 
     {/* <div className="spacerDIV"></div> */}

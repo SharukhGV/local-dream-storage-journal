@@ -56,7 +56,7 @@ useEffect(()=>{
 <tbody>
     <tr>
         <td>{index+=1}</td>
-    <td><Link to={`/dreams/${identification}`}>{name1}</Link>
+    <td><Link style={{color:"white"}} to={`/dreams/${identification}`}>{name1}</Link>
 </td>
     <td>{topic1}</td>
     </tr>

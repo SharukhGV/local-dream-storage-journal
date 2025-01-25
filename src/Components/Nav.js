@@ -43,14 +43,13 @@ function Nav() {
   // }, [])
 
   return (
-    <span> 
+    <div> 
     <Link to="/"><img className="brain"
       style={{
         maxWidth: "25px",
         position: "absolute",
         left: "10px",
-        top: "10px",
-        margin: "50px",
+    top:"17px"
       }}
       src={brainHeart}
       alt="home logo button"
@@ -115,7 +114,7 @@ function Nav() {
               Sign Up
             </NavLink></li> */}
       </ul>
-    </nav></span>
+    </nav></div>
   );
 }
 

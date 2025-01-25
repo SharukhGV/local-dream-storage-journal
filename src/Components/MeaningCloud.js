@@ -39,4 +39,4 @@ const response = fetch("https://api.meaningcloud.com/topics-2.0", requestOptions
 }
 
 
-export desfault MeaningCloud
+export default MeaningCloud

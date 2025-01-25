@@ -1,476 +1,194 @@
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #8104aa;
+  --background-color: rgba(0, 0, 0, 0.8);
+  --text-color: white;
+  --hover-color: rgba(7, 245, 165, 0.3);
+}
 
-.homePAge{
-    
-    margin: auto;
-    padding-left: 200px;
-    padding-right: 200px;
-    font-size: 20px;
-    text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
-  background-color: #f2f2f200;
-  color:white
-  }
+body {
+  /* font-family: Arial, sans-serif; */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
 
-  .hiddenMiddleRoute{
-    display:none;
-  }
-  audio::-webkit-media-controls-panel{
-    background-color: #30e73900;
-  }
-
-  .cardContact{
-    text-align: center;
-    font-size: medium;
-    border: solid;
-    border-radius: 10px;
-    padding: 10px;
-    margin: auto;
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: #69278a2d;
-    color:beige;
-    
-
-  }
-  
-  #root{
-    background-color: #cccccc00;
-    z-index:0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border-radius:30px ;
+.homePage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  }
-/* .navBar{
-  background-color: #4caf4f03;
-} */
-nav{background-color: #504ab680;  }
+}
 
+.cardContact {
+  background-color: rgba(105, 39, 138, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
 
-  .new {
-    text-align: center;
-  
-  }
+nav {
+  background-color: rgba(80, 74, 182, 0.7);
+  padding: 20px 0;
+}
 
-  li {display: inline-block;}
-
-  .spacerDIV{background-color: #0000000e;}
-
-  
 .no-bullets {
   list-style-type: none;
-  background-color: rgba(47, 4, 43, 0);
-  padding: 20px;
-}
-.links{
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
+.links {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
-.links:hover{
-  background-color: rgba(7, 245, 165, 0.202);
-  border-radius:  10%;
-  padding:10px;
-  }
+.links:hover {
+  background-color: var(--hover-color);
+}
 
-
-
-  .thedreamtable{
-    font-family: Arial, Helvetica, sans-serif;
+table {
+  width: 100%;
   border-collapse: collapse;
-  width: 100%;
-  
-  }
-
-  a {
-    color: rgb(255, 208, 0);
-}
-  :visited{color: rgb(255, 67, 99)}
-
-  .thedreamtable td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
+  margin: 20px auto;
 }
 
-.thedreamtable tr:nth-child(even){background-color: #00000000;}
-
-.thedreamtable tr:hover {background-color: #dddddd54;}
-
-.thedreamtable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+th, td {
+  padding: 12px;
   text-align: left;
-  background-color: #0704aa;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+th {
+  background-color: var(--secondary-color);
+}
 
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
-input[type=text], select, textarea {
+input[type="text"], input[type="date"], select, textarea {
   width: 100%;
-  padding: 12px 20px;
+  padding: 12px;
   margin: 8px 0;
-  display: inline-block;
-  border: 3px solid #555555;
+  border: 2px solid #555;
   border-radius: 4px;
-  box-sizing: border-box;
-  background-color: #391545df;
-  color: whitesmoke;
+  background-color: rgba(57, 21, 69, 0.9);
+  color: var(--text-color);
 }
 
-input[type=date], select {
-  width: 100%;
+button, input[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--text-color);
   padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 3px solid #555;
-  border-radius: 4px;
-  box-sizing: border-box;
-  background-color: #555;
-  color: whitesmoke;
-
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
 }
 
-input[type=submit]:hover {
+button:hover, input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-div {
-  border-radius: 5px;
-  background-color: #00000063;
-  padding: 20px;
-}
-
-
-
-.thedreamtableSHOW {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.thedreamtableSHOW  td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  color:whitesmoke
-}
-
-.thedreamtableSHOW  tr:nth-child(even){background-color: #0814411b}
-.thedreamtableSHOW  tr th {text-align: center;}
-
-.thedreamtableSHOW tr:hover {background-color: #dc55d363;}
-
-.thedreamtableSHOW  th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #895bcf86;
-}
-
-.thedreamtable  th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #895bcf;
-}
-
-.thedreamtable  tr {
-  text-align: center;
-}
-
-
-button {
-  width: 30%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 5px;
-  margin-right: 5px;
-
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .editbutton {
-  width: 30%;
   background-color: #da5b16;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 5px;
-  margin-right: 5px;
+}
+
+.editbutton:hover {
+  background-color: #c24e10;
 }
 
 .delete {
-  width: 30%;
   background-color: #af4c4c;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
-
-legend {
-  color:#8104aa;
+.delete:hover {
+  background-color: #983f3f;
 }
 
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-@media (min-width: 300px) and (max-width: 768px) {
-
-
-  .homePAge{
-  
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  
-  .cardContact{
-    text-align: center;
-    font-size: small;
-    border: solid;
-    border-radius: 10px;
+@media (max-width: 768px) {
+  .homePage {
     padding: 10px;
-    margin: auto;
-    font-family:Arial, Helvetica, sans-serif;
-    z-index: 0;
-
   }
 
-  .links{
-    font-size: small;
+  .no-bullets {
+    flex-direction: column;
   }
 
-
-  button {
+  button, .editbutton, .delete {
     width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    margin: 5px 0;
   }
-  
-  .editbutton {
-    width: 100%;
-    background-color: #da5b16;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .delete {
-    width: 100%;
-    background-color: #af4c4c;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  #dreamLogo{
-    max-width:250px;
-    max-height: auto;
-  }
-
-}
-
-.login{
-
-  margin:auto
-/* padding-left: 100px;
-padding-right: 100px; */
-
 }
 
 
 
-/*  */
 
-
-
-
-
-.audioCard{
-  background-color: #45a04916;
+.brain {
+  margin-right: 20px;
 }
 
-.edit{
-  background-color: #8104aa00;
+.no-bullets {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-/* PURE CSS TWINKLING STARS BACKGROUND */
-
-/* CodePen
-pure CSS twinkling stars background
-Anastasia Goodwin */
-/* The code below is by Anastasia Goodwin (begin) */
-
-@keyframes move-background {
-  from {
-		-webkit-transform: translate3d(0px, 0px, 0px);
-	}
-	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
-	}
-}
-@-webkit-keyframes move-background {
-  from {
-		-webkit-transform: translate3d(0px, 0px, 0px);
-	}
-	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
-	}
+.links {
+  padding: 10px;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
 }
 
-@-moz-keyframes move-background {    
-	from {
-		-webkit-transform: translate3d(0px, 0px, 0px);
-	}
-	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
-	}
+.links:hover {
+  background-color: rgba(7, 245, 165, 0.202);
+  border-radius: 10%;
 }
 
-    @-webkit-keyframes move-background {
-	from {
-		-webkit-transform: translate3d(0px, 0px, 0px);
-	}
-	to { 
-		-webkit-transform: translate3d(1000px, 0px, 0px);
-	}
-}
-
-.background-container{
-	position: fixed;
-	top: 0;
-	left:0;
-	bottom: 0;
-	right: 0;
-  z-index: -1000;
-}
-
-.stars {
- background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
- position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	display: block;
-  	z-index: 0;
-}
-
-.twinkling{
-	width:10000px;
-	height: 100%;
-	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
-	background-size: 1000px 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 2;
-    
-    -moz-animation:move-background 70s linear infinite;
-  -ms-animation:move-background 70s linear infinite;
-  -o-animation:move-background 70s linear infinite;
-  -webkit-animation:move-background 70s linear infinite;
-  animation:move-background 70s linear infinite;
-	
-}
-
-.clouds{
-	width:10000px;
-	height: 100%;
-	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
-	background-size: 1000px 1000px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 3;
-
-   -moz-animation:move-background 150s linear infinite;
-  -ms-animation:move-background 150s linear infinite;
-  -o-animation:move-background 150s linear infinite;
-  -webkit-animation:move-background 150s linear infinite;
-  animation:move-background 150s linear infinite;
-}
-/* img{
-  height: 70vh;
-  width:70vh;
-  position: absolute;
-  z-index: 3;
-  right: 20px;
-} */
-/* The code below is by Anastasia Goodwin (end) */
-
-/* pure CSS twinkling stars background */
-/* CodePen Home
-pure CSS twinkling stars background
-Anastasia Goodwin */
-
-
-.audioCard{
-
-  background-color: rgba(0, 0, 0, 0);
-}
-
-
-.buttonPDF{
-  background-color: #ffffff00;
-}
-
-/* 
-.dreamLogo{width: 30px;
-max-height: auto;} */
-
-img{
-  max-width: 100%;
-  height: auto;}
-
-
-
-  @media (min-width: 769px){
-
-    #dreamLogo{
-      max-width:370px;
-      max-height: auto;
-    }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .brain:hover{
-background-color: rgba(255, 0, 0, 0.233);
-border-radius: 50%;
+  .brain {
+    margin-bottom: 10px;
   }
+
+  .no-bullets {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    margin-bottom: 5px;
+  }
+}
+
+body{
+  text-align: center;
+}

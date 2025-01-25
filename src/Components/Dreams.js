@@ -53,11 +53,7 @@ function Dreams({fileData}){
 {/* <img src={vault} alt="Dram Title for All dreams called Dream Vault"></img> */}
 
 <div className="cardContact">
-<div class="background-container">
-<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt=""></img>
-<div class="stars"></div>
-<div class="twinkling"></div>
-<div class="clouds"></div></div>
+
         <table className="thedreamtable">
           <thead>
     <tr>
